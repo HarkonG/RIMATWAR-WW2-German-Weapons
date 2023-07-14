@@ -34,7 +34,7 @@
     </Operation>
 
     <Operation Class="PatchOperationReplace">
-        <xpath>Defs/ThingDef[defName="HRK_FG42LMG" or defName="HRK_G43RifleScoped" or defName="HRK_Karabiner98k" or defName="HRK_Karabiner98kGL" or defName="HRK_Karabiner98kSR" or defName="HRK_MG34LMGDoubleDrum" or defName="HRK_MP40SMG" or defName="HRK_Karabiner98kGL" or defName="HRK_Panzerbuchse39ATRifle" or defName="HRK_StG44AR" or defName="HRK_MG42LMG"]/tools
+        <xpath>Defs/ThingDef[defName="HRK_FG42LMGScoped" or defName="HRK_G43RifleScoped" or defName="HRK_Karabiner98k" or defName="HRK_Karabiner98kGL" or defName="HRK_Karabiner98kSR" or defName="HRK_MG34LMGDoubleDrum" or defName="HRK_MP40SMG" or defName="HRK_Karabiner98kGL" or defName="HRK_Panzerbuchse39ATRifle" or defName="HRK_StG44AR" or defName="HRK_MG42LMG"]/tools
         </xpath>
         <value>
             <tools>
