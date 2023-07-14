@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Combat Extended</li>
+        </mods>
+        <nomatch Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VWEG">
+                    <xpath>Defs/ThingDef[defName="HRK_Stielhandgranate24Grenade"]/graphicData/texPath</xpath>
+                    <value>
+                        <texPath>Things/Item/Equipment/WeaponRanged/HRK_Stielhandgranate24GrenadesLoose</texPath>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VWEG">
+                    <xpath>Defs/ThingDef[defName="HRK_PanzerwurfmineGrenade"]/graphicData/texPath</xpath>
+                    <value>
+                        <texPath>Things/Item/Equipment/WeaponRanged/HRK_PanzerwurfmineGrenadesLoose</texPath>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VWE">
+                    <xpath>Defs/ThingDef[defName="HRK_Panzerschreck"]/recipeMaker/researchPrerequisite</xpath>
+                    <value>
+                        <researchPrerequisite>VWE_HeavyWeapons</researchPrerequisite>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAddModExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+                    <xpath>Defs/ThingDef[defName="HRK_Panzerschreck"]</xpath>
+                    <value>
+                        <li Class="HeavyWeapons.HeavyWeapon">
+                            <weaponHitPointsDeductionOnShot>20</weaponHitPointsDeductionOnShot>
+                            <isHeavy>false</isHeavy>
+                        </li>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+                    <xpath>Defs/ThingDef[defName="HRK_Panzerschreck"]/verbs/li[1]/verbClass</xpath>
+                    <value>
+                        <verbClass>HeavyWeapons.Verb_Shoot</verbClass>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+                    <xpath>Defs/ThingDef[defName="HRK_Panzerschreck"]/description</xpath>
+                    <value>
+                        <description>The Panzerschreck was designed as a lightweight infantry anti-tank weapon and was an enlarged copy of the American bazooka. The weapon was shoulder-launched and fired a fin-stabilized rocket with a shaped-charge warhead. \n\nBecause you are using Vanilla Expanded Framework this weapon loses durability with each shot (5 shots in total) to make it more balanced.</description>
+                    </value>
+                </li>
+
+            </operations>
+        </nomatch>
+    </Operation>
+
+</Patch>        

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+    <FleckDef ParentName="FleckBase_Thrown">
+        <defName>HRK_Mote_StielhandgranateCup</defName>
+        <graphicData>
+            <texPath>Things/Motes/HRK_Mote_StielhandgranateCup</texPath>
+            <renderInstanced>true</renderInstanced>
+        </graphicData>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <solidTime>3.0</solidTime>
+        <fadeOutTime>0.2</fadeOutTime>
+        <landSound>C_Impact_BulletCasing</landSound>
+        <collide>true</collide>
+    </FleckDef>
+
+    <FleckDef ParentName="FleckBase_Thrown">
+        <defName>HRK_Mote_Panzerfaust</defName>
+        <graphicData>
+            <texPath>Things/Motes/HRK_Mote_Panzerfaust</texPath>
+            <renderInstanced>true</renderInstanced>
+            <drawSize>(1.5,1.5)</drawSize>
+        </graphicData>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <solidTime>3.0</solidTime>
+        <fadeOutTime>0.2</fadeOutTime>
+        <landSound>C_Impact_BulletCasing</landSound>
+        <collide>true</collide>
+    </FleckDef>
+
+</Defs>

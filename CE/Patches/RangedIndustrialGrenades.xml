@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+
+    <!-- ========== Kill recipe maker ========== -->
+    <Operation Class="PatchOperationAttributeSet">
+        <xpath>Defs/ThingDef[defName="HRK_Stielhandgranate24Grenade" or defName="HRK_StielhandgranateBundleGrenade" or defName="HRK_PanzerwurfmineGrenade" or defName="HRK_GeballteLadungGrenade"]</xpath>
+        <attribute>ParentName</attribute>
+        <value>BaseWeapon</value>
+    </Operation>
+
+    <!--===== TOOLS FOR THE EMPEROR =====-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="HRK_Stielhandgranate24Grenade" or defName="HRK_StielhandgranateBundleGrenade" or defName="HRK_PanzerwurfmineGrenade" or defName="HRK_GeballteLadungGrenade"]</xpath>
+        <value>
+            <tools>
+                <li Class="CombatExtended.ToolCE">
+                    <label>Body</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>2</power>
+                    <cooldownTime>1.75</cooldownTime>
+                    <armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+                    <linkedBodyPartsGroup>Base</linkedBodyPartsGroup>
+                </li>
+            </tools>
+        </value>
+    </Operation>
+
+    <!-- ========== M24 grenade (Frag) ========== -->
+
+    <!-- Projectile -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs</xpath>
+        <value>
+            <ThingDef ParentName="BaseGrenadeProjectile">
+                <defName>HRK_Proj_Stielhandgranate24Grenade</defName>
+                <label>M24 frag grenade</label>
+                <graphicData>
+                    <texPath>Things/Projectile/HRK_Stielhandgranate24Grenade</texPath>
+                    <graphicClass>Graphic_Single</graphicClass>
+                </graphicData>
+                <thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+                <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                    <explosionRadius>1.5</explosionRadius>
+                    <damageDef>Bomb</damageDef>
+                    <damageAmountBase>56</damageAmountBase>
+                    <explosionDelay>60</explosionDelay>                    
+                    <casingMoteDefname>Mote_GrenadePin</casingMoteDefname>
+                    <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+                    <speed>10</speed>
+                    <soundExplode>HRK_Explosion_FragGrenade</soundExplode>
+                    <dropsCasings>true</dropsCasings>
+                    <casingMoteDefname>HRK_Mote_StielhandgranateCup</casingMoteDefname>
+                    <casingFilthDefname>HRK_Filth_StielhandgranateCup</casingFilthDefname>
+                </projectile>
+                <comps>
+                    <li Class="CombatExtended.CompProperties_Fragments">
+                        <fragments>
+                            <Fragment_Small>40</Fragment_Small>
+                        </fragments>
+                    </li>
+                </comps>
+            </ThingDef>
+        </value>
+    </Operation>
+
+    <!-- Grenade -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="HRK_Stielhandgranate24Grenade"]/label</xpath>
+        <value>
+            <label>M24 frag grenade</label>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="HRK_Stielhandgranate24Grenade"]/graphicData</xpath>
+        <value>
+            <graphicData>
+                <texPath>Things/Ammo/German/HandGrenades/HRK_Stielhandgranate24Grenade</texPath>
+                <graphicClass>Graphic_StackCount</graphicClass>
+                <onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+            </graphicData>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="HRK_Stielhandgranate24Grenade"]</xpath>
+        <value>
+            <thingClass>CombatExtended.AmmoThing</thingClass>
+            <stackLimit>75</stackLimit>
+            <resourceReadoutPriority>First</resourceReadoutPriority>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAttributeSet">
+        <xpath>Defs/ThingDef[defName="HRK_Stielhandgranate24Grenade"]</xpath>
+        <attribute>Class</attribute>
+        <value>CombatExtended.AmmoDef</value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="HRK_Stielhandgranate24Grenade"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="CombatExtended.CompProperties_ExplosiveCE">
+                    <damageAmountBase>56</damageAmountBase>
+                    <explosiveDamageType>Bomb</explosiveDamageType>
+                    <explosiveRadius>1.5</explosiveRadius>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="HRK_Stielhandgranate24Grenade"]/comps</xpath>
+        <value>
+            <li Class="CombatExtended.CompProperties_Fragments">
+                <fragments>
+                    <Fragment_Small>40</Fragment_Small>
+                </fragments>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>HRK_Stielhandgranate24Grenade</defName>
+        <statBases>
+            <Mass>0.4</Mass>
+            <Bulk>0.87</Bulk>
+            <MarketValue>12.22</MarketValue>
+            <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+            <SightsEfficiency>0.65</SightsEfficiency>
+        </statBases>
+        <Properties>
+            <label>throw M24 frag grenade</label>
+            <verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <range>10.0</range>
+            <minRange>4</minRange>
+            <warmupTime>0.8</warmupTime>
+            <noiseRadius>4</noiseRadius>
+            <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+            <soundCast>ThrowGrenade</soundCast>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+            <defaultProjectile>HRK_Proj_Stielhandgranate24Grenade</defaultProjectile>
+            <onlyManualCast>true</onlyManualCast>
+            <ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+            <ai_AvoidFriendlyFireRadius>7</ai_AvoidFriendlyFireRadius>
+        </Properties>
+        <weaponTags>
+            <li>CE_AI_AOE</li>
+            <li>CE_OneHandedWeapon</li>
+        </weaponTags>
+    </Operation>
+
+    <!-- ========== M24 grenade bundle (Frag?) ========== -->
+
+    <!-- Projectile -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs</xpath>
+        <value>
+            <ThingDef ParentName="BaseGrenadeProjectile">
+                <defName>HRK_Proj_StielhandgranateBundleGrenade</defName>
+                <label>M24 grenade bundle</label>
+                <graphicData>
+                    <texPath>Things/Projectile/HRK_StielhandgranateBundleGrenade</texPath>
+                    <graphicClass>Graphic_Single</graphicClass>
+                </graphicData>
+                <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                    <damageDef>Bullet</damageDef>
+                    <damageAmountBase>100</damageAmountBase>
+                    <armorPenetrationSharp>65</armorPenetrationSharp>
+                    <armorPenetrationBlunt>33</armorPenetrationBlunt>
+                    <explosionDelay>60</explosionDelay>
+                    <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+                    <speed>6</speed>
+                    <gravityFactor>1.3</gravityFactor>
+                    <secondaryDamage>
+                        <li>
+                            <def>Bomb_Secondary</def>
+                            <amount>100</amount>
+                        </li>
+                    </secondaryDamage>
+                    <soundExplode>HRK_Explosion_FragGrenade</soundExplode>
+                    <dropsCasings>true</dropsCasings>
+                    <casingMoteDefname>HRK_Mote_StielhandgranateCup</casingMoteDefname>
+                    <casingFilthDefname>HRK_Filth_StielhandgranateCup</casingFilthDefname>
+                </projectile>
+                <comps>
+                    <li Class="CombatExtended.CompProperties_Fragments">
+                        <fragments>
+                            <Fragment_Small>60</Fragment_Small>
+                        </fragments>
+                    </li>
+                </comps>
+            </ThingDef>
+        </value>
+    </Operation>
+
+    <!-- Grenade -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="HRK_StielhandgranateBundleGrenade"]/label</xpath>
+        <value>
+            <label>M24 grenade bundle</label>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="HRK_StielhandgranateBundleGrenade"]/graphicData</xpath>
+        <value>
+            <graphicData>
+                <texPath>Things/Ammo/German/HandGrenades/HRK_StielhandgranateBundleGrenade</texPath>
+                <graphicClass>Graphic_StackCount</graphicClass>
+                <onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+            </graphicData>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="HRK_StielhandgranateBundleGrenade"]</xpath>
+        <value>
+            <thingClass>CombatExtended.AmmoThing</thingClass>
+            <stackLimit>75</stackLimit>
+            <resourceReadoutPriority>First</resourceReadoutPriority>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAttributeSet">
+        <xpath>Defs/ThingDef[defName="HRK_StielhandgranateBundleGrenade"]</xpath>
+        <attribute>Class</attribute>
+        <value>CombatExtended.AmmoDef</value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="HRK_StielhandgranateBundleGrenade"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="CombatExtended.CompProperties_ExplosiveCE">
+                    <damageAmountBase>56</damageAmountBase>
+                    <explosiveDamageType>Bomb</explosiveDamageType>
+                    <explosiveRadius>1.5</explosiveRadius>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="HRK_StielhandgranateBundleGrenade"]/comps</xpath>
+        <value>
+            <li Class="CombatExtended.CompProperties_Fragments">
+                <fragments>
+                    <Fragment_Small>40</Fragment_Small>
+                </fragments>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>HRK_StielhandgranateBundleGrenade</defName>
+        <statBases>
+            <Mass>0.4</Mass>
+            <Bulk>0.87</Bulk>
+            <MarketValue>12.22</MarketValue>
+            <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+            <SightsEfficiency>0.65</SightsEfficiency>
+        </statBases>
+        <Properties>
+            <label>throw M24 grenade bundle</label>
+            <verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <range>10.0</range>
+            <minRange>4</minRange>
+            <warmupTime>0.8</warmupTime>
+            <noiseRadius>4</noiseRadius>
+            <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+            <soundCast>ThrowGrenade</soundCast>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+            <defaultProjectile>HRK_Proj_StielhandgranateBundleGrenade</defaultProjectile>
+            <onlyManualCast>true</onlyManualCast>
+            <ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+            <ai_AvoidFriendlyFireRadius>7</ai_AvoidFriendlyFireRadius>
+        </Properties>
+        <weaponTags>
+            <li>CE_AI_AOE</li>
+            <li>CE_OneHandedWeapon</li>
+        </weaponTags>
+    </Operation>
+
+    <!-- ========== PWM anti-tank grenade (anti-tank) ========== -->
+
+    <!-- Projectile -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs</xpath>
+        <value>
+            <ThingDef ParentName="BaseGrenadeProjectile">
+                <defName>HRK_Proj_PanzerwurfmineGrenade</defName>
+                <label>PWM anti-tank grenade</label>
+                <graphicData>
+                    <texPath>Things/Projectile/HRK_PanzerwurfmineGrenade</texPath>
+                    <graphicClass>Graphic_Single</graphicClass>
+                </graphicData>
+                <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                    <damageDef>Bullet</damageDef>
+                    <damageAmountBase>185</damageAmountBase>
+                    <armorPenetrationSharp>75</armorPenetrationSharp>
+                    <armorPenetrationBlunt>23</armorPenetrationBlunt>
+                    <explosionDelay>0</explosionDelay>
+                    <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+                    <speed>6</speed>
+                    <gravityFactor>1.3</gravityFactor>
+                </projectile>
+                <comps>
+                    <li Class="CombatExtended.CompProperties_ExplosiveCE">
+                        <damageAmountBase>89</damageAmountBase>
+                        <explosiveDamageType>Bomb</explosiveDamageType>
+                        <explosiveRadius>0.5</explosiveRadius>
+                        <explosionSound>HRK_Explosion_FragGrenade</explosionSound>
+                        <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+                    </li>
+                    <li Class="CombatExtended.CompProperties_Fragments">
+                        <fragments>
+                            <Fragment_Small>5</Fragment_Small>
+                        </fragments>
+                    </li>
+                </comps>
+            </ThingDef>
+        </value>
+    </Operation>
+
+    <!-- Grenade -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="HRK_PanzerwurfmineGrenade"]/label</xpath>
+        <value>
+            <label>PWM anti-tank grenade</label>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="HRK_PanzerwurfmineGrenade"]/graphicData</xpath>
+        <value>
+            <graphicData>
+                <texPath>Things/Ammo/German/HandGrenades/HRK_PanzerwurfmineGrenade</texPath>
+                <graphicClass>Graphic_StackCount</graphicClass>
+                <onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+            </graphicData>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="HRK_PanzerwurfmineGrenade"]</xpath>
+        <value>
+            <thingClass>CombatExtended.AmmoThing</thingClass>
+            <stackLimit>75</stackLimit>
+            <resourceReadoutPriority>First</resourceReadoutPriority>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAttributeSet">
+        <xpath>Defs/ThingDef[defName="HRK_PanzerwurfmineGrenade"]</xpath>
+        <attribute>Class</attribute>
+        <value>CombatExtended.AmmoDef</value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="HRK_PanzerwurfmineGrenade"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="CombatExtended.CompProperties_ExplosiveCE">
+                    <damageAmountBase>56</damageAmountBase>
+                    <explosiveDamageType>Bomb</explosiveDamageType>
+                    <explosiveRadius>1.5</explosiveRadius>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="HRK_PanzerwurfmineGrenade"]/comps</xpath>
+        <value>
+            <li Class="CombatExtended.CompProperties_Fragments">
+                <fragments>
+                    <Fragment_Small>40</Fragment_Small>
+                </fragments>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>HRK_PanzerwurfmineGrenade</defName>
+        <statBases>
+            <Mass>0.4</Mass>
+            <Bulk>0.87</Bulk>
+            <MarketValue>12.22</MarketValue>
+            <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+            <SightsEfficiency>0.65</SightsEfficiency>
+        </statBases>
+        <Properties>
+            <label>throw PWM anti-tank grenade</label>
+            <verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <range>8.0</range>
+            <minRange>4</minRange>
+            <warmupTime>0.8</warmupTime>
+            <noiseRadius>4</noiseRadius>
+            <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+            <soundCast>ThrowGrenade</soundCast>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+            <defaultProjectile>HRK_Proj_PanzerwurfmineGrenade</defaultProjectile>
+            <onlyManualCast>true</onlyManualCast>
+            <ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+            <ai_AvoidFriendlyFireRadius>7</ai_AvoidFriendlyFireRadius>
+        </Properties>
+        <weaponTags>
+            <li>CE_AI_AOE</li>
+            <li>CE_OneHandedWeapon</li>
+        </weaponTags>
+    </Operation>
+
+    <!-- ========== 3kg pioneer explosive charge ========== -->
+
+    <!-- Projectile -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs</xpath>
+        <value>
+            <ThingDef ParentName="BaseGrenadeProjectile">
+                <defName>HRK_Proj_GeballteLadungGrenade</defName>
+                <label>3kg pioneer explosive charge</label>
+                <graphicData>
+                    <texPath>Things/Projectile/HRK_GeballteLadungGrenade</texPath>
+                    <graphicClass>Graphic_Single</graphicClass>
+                </graphicData>
+                <thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+                <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                    <explosionRadius>4.1</explosionRadius>
+                    <damageDef>Bomb</damageDef>
+                    <damageAmountBase>324</damageAmountBase>
+                    <explosionDelay>240</explosionDelay>
+                    <dropsCasings>False</dropsCasings>
+                    <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+                    <speed>3</speed>
+                </projectile>
+            </ThingDef>
+        </value>
+    </Operation>
+
+    <!-- Grenade -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="HRK_GeballteLadungGrenade"]/label</xpath>
+        <value>
+            <label>3kg pioneer explosive charge</label>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="HRK_GeballteLadungGrenade"]/graphicData</xpath>
+        <value>
+            <graphicData>
+                <texPath>Things/Ammo/German/HandGrenades/HRK_GeballteLadungGrenade</texPath>
+                <graphicClass>Graphic_StackCount</graphicClass>
+                <onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+            </graphicData>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="HRK_GeballteLadungGrenade"]</xpath>
+        <value>
+            <thingClass>CombatExtended.AmmoThing</thingClass>
+            <stackLimit>10</stackLimit>
+            <resourceReadoutPriority>First</resourceReadoutPriority>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAttributeSet">
+        <xpath>Defs/ThingDef[defName="HRK_GeballteLadungGrenade"]</xpath>
+        <attribute>Class</attribute>
+        <value>CombatExtended.AmmoDef</value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="HRK_GeballteLadungGrenade"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="CombatExtended.CompProperties_ExplosiveCE">
+                    <damageAmountBase>56</damageAmountBase>
+                    <explosiveDamageType>Bomb</explosiveDamageType>
+                    <explosiveRadius>1.5</explosiveRadius>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>HRK_GeballteLadungGrenade</defName>
+        <statBases>
+            <Mass>0.4</Mass>
+            <Bulk>0.87</Bulk>
+            <MarketValue>12.22</MarketValue>
+            <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+            <SightsEfficiency>0.65</SightsEfficiency>
+        </statBases>
+        <Properties>
+            <label>throw 3kg pioneer explosive charge</label>
+            <verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <range>5.0</range>
+            <warmupTime>2.1</warmupTime>
+            <noiseRadius>4</noiseRadius>
+            <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+            <soundCast>ThrowGrenade</soundCast>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+            <defaultProjectile>HRK_Proj_GeballteLadungGrenade</defaultProjectile>
+            <onlyManualCast>true</onlyManualCast>
+            <ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+        </Properties>
+        <weaponTags Inherit="False">
+            <li>CE_OneHandedWeapon</li>
+        </weaponTags>
+    </Operation>
+
+</Patch>

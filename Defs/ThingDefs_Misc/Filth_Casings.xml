@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="BaseFilth">
+        <defName>HRK_Filth_StielhandgranateCup</defName>
+        <label>M24 grenade cups</label>
+        <graphicData>
+            <texPath>Things/Filth/HRK_Filth_StielhandgranateCup</texPath>
+        </graphicData>
+        <statBases>
+            <Beauty>-15</Beauty>
+            <Cleanliness>-5</Cleanliness>
+            <MaxHitPoints>30</MaxHitPoints>
+            <Flammability>0</Flammability>
+        </statBases>
+        <filth>
+            <cleaningWorkToReduceThickness>10</cleaningWorkToReduceThickness>
+            <disappearsInDays>20~30</disappearsInDays>
+            <maxThickness>5</maxThickness>
+        </filth>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseFilth">
+        <defName>HRK_Filth_Panzerfaust</defName>
+        <label>panzerfaust tube</label>
+        <graphicData>
+            <texPath>Things/Filth/HRK_Filth_Panzerfaust</texPath>
+        </graphicData>
+        <statBases>
+            <Beauty>-15</Beauty>
+            <Cleanliness>-5</Cleanliness>
+            <MaxHitPoints>30</MaxHitPoints>
+            <Flammability>0</Flammability>
+        </statBases>
+        <filth>
+            <cleaningWorkToReduceThickness>10</cleaningWorkToReduceThickness>
+            <disappearsInDays>20~30</disappearsInDays>
+            <maxThickness>5</maxThickness>
+        </filth>
+    </ThingDef>
+
+</Defs>

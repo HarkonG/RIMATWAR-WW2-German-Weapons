@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- ========== M24 grenade (Frag) ========== -->
+    <RecipeDef ParentName="GrenadeRecipeBase">
+        <defName>HRK_RecipeDef_Stielhandgranate24Grenade</defName>
+        <label>make M24 frag grenade x10</label>
+        <description>Craft 10 M24 frag grenades.</description>
+        <jobString>Making M24 frag grenades.</jobString>
+        <workAmount>3600</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FSX</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>WoodLog</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Steel</li>
+                <li>FSX</li>
+                <li>WoodLog</li>
+                <li>ComponentIndustrial</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <HRK_Stielhandgranate24Grenade>10</HRK_Stielhandgranate24Grenade>
+        </products>
+    </RecipeDef>
+
+    <!-- ========== M24 grenade bundle (Frag?) ========== -->
+    <RecipeDef ParentName="GrenadeRecipeBase">
+        <defName>HRK_RecipeDef_StielhandgranateBundleGrenade</defName>
+        <label>make M24 grenade bundle</label>
+        <description>Craft M24 grenade bundle.</description>
+        <jobString>Making M24 grenade bundle.</jobString>
+        <workAmount>3600</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>HRK_Stielhandgranate24Grenade</li>
+                    </thingDefs>
+                </filter>
+                <count>7</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Steel</li>
+                <li>HRK_Stielhandgranate24Grenade</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <HRK_StielhandgranateBundleGrenade>1</HRK_StielhandgranateBundleGrenade>
+        </products>
+    </RecipeDef>
+
+    <!-- ========== PWM anti-tank grenade (anti-tank) ========== -->
+    <RecipeDef ParentName="GrenadeRecipeBase">
+        <defName>HRK_RecipeDef_PanzerwurfmineGrenade</defName>
+        <label>make PWM anti-tank grenade x10</label>
+        <description>Craft 10 PWM anti-tank grenades.</description>
+        <jobString>Making PWM anti-tank grenades.</jobString>
+        <workAmount>4500</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Textiles</li>
+                    </categories>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FSX</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Textiles</li>
+            </categories>
+            <thingDefs>
+                <li>Steel</li>
+                <li>FSX</li>
+                <li>ComponentIndustrial</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <HRK_PanzerwurfmineGrenade>10</HRK_PanzerwurfmineGrenade>
+        </products>
+    </RecipeDef>
+
+    <!-- ========== 3kg pioneer explosive charge ========== -->
+    <RecipeDef ParentName="GrenadeRecipeBase">
+        <defName>HRK_RecipeDef_GeballteLadungGrenade</defName>
+        <label>make 3kg pioneer explosive charge x5</label>
+        <description>Craft 5 3kg pioneer explosive charges.</description>
+        <jobString>Making 3kg pioneer explosive charges.</jobString>
+        <workAmount>4500</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FSX</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>3</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Steel</li>
+                <li>FSX</li>
+                <li>ComponentIndustrial</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <HRK_GeballteLadungGrenade>5</HRK_GeballteLadungGrenade>
+        </products>
+    </RecipeDef>
+
+</Defs>

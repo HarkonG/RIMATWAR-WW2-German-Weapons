@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+    <!--===== TOOLS FOR THE TOOL GOD =====-->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="HRK_P08Luger"]/tools
+        </xpath>
+        <value>
+            <tools>
+                <li Class="CombatExtended.ToolCE">
+                    <label>grip</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>2</power>
+                    <cooldownTime>1.54</cooldownTime>
+                    <chanceFactor>1.5</chanceFactor>
+                    <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                    <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+                </li>
+                <li Class="CombatExtended.ToolCE">
+                    <label>muzzle</label>
+                    <capacities>
+                        <li>Poke</li>
+                    </capacities>
+                    <power>2</power>
+                    <cooldownTime>1.54</cooldownTime>
+                    <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                    <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                </li>
+            </tools>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="HRK_FG42LMG" or defName="HRK_G43RifleScoped" or defName="HRK_Karabiner98k" or defName="HRK_Karabiner98kGL" or defName="HRK_Karabiner98kSR" or defName="HRK_MG34LMGDoubleDrum" or defName="HRK_MP40SMG" or defName="HRK_Karabiner98kGL" or defName="HRK_Panzerbuchse39ATRifle" or defName="HRK_StG44AR" or defName="HRK_MG42LMG"]/tools
+        </xpath>
+        <value>
+            <tools>
+                <li Class="CombatExtended.ToolCE">
+                    <label>stock</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>8</power>
+                    <cooldownTime>1.55</cooldownTime>
+                    <chanceFactor>1.5</chanceFactor>
+                    <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                    <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                </li>
+                <li Class="CombatExtended.ToolCE">
+                    <label>barrel</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>5</power>
+                    <cooldownTime>2.02</cooldownTime>
+                    <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+                    <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                </li>
+                <li Class="CombatExtended.ToolCE">
+                    <label>muzzle</label>
+                    <capacities>
+                        <li>Poke</li>
+                    </capacities>
+                    <power>8</power>
+                    <cooldownTime>1.55</cooldownTime>
+                    <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                    <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                </li>
+            </tools>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="HRK_Panzerschreck"]/tools
+        </xpath>
+        <value>
+            <tools>
+                <li Class="CombatExtended.ToolCE">
+                    <label>barrel</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>10</power>
+                    <cooldownTime>2.44</cooldownTime>
+                    <armorPenetrationBlunt>3.5</armorPenetrationBlunt>
+                    <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                </li>
+            </tools>
+        </value>
+    </Operation>
+
+    <!--===== HRK_P08Luger =====-->
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>HRK_P08Luger</defName>
+        <statBases>
+            <WorkToMake>7000</WorkToMake>
+            <Mass>0.80</Mass>
+            <Bulk>2.22</Bulk>
+            <SwayFactor>1.01</SwayFactor>
+            <ShotSpread>0.18</ShotSpread>
+            <SightsEfficiency>0.70</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.38</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>25</Steel>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>True</hasStandardCommand>
+            <defaultProjectile>Bullet_9x19mmPara_FMJ</defaultProjectile>
+            <warmupTime>0.6</warmupTime>
+            <range>12</range>
+            <soundCast>HRK_Shot_P08Luger</soundCast>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+            <recoilAmount>2.56</recoilAmount>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>8</magazineSize>
+            <reloadTime>4</reloadTime>
+            <ammoSet>AmmoSet_9x19mmPara</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aiAimMode>Snapshot</aiAimMode>
+            <aiUseBurstMode>FALSE</aiUseBurstMode>
+        </FireModes>
+        <weaponTags>
+            <li>CE_Sidearm</li>
+            <li>CE_AI_BROOM</li>
+            <li>CE_OneHandedWeapon</li>
+        </weaponTags>
+    </Operation>
+
+    <!--===== HRK_MP40SMG =====-->
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>HRK_MP40SMG</defName>
+        <statBases>
+            <WorkToMake>30000</WorkToMake>
+            <Mass>3.90</Mass>
+            <Bulk>6.30</Bulk>
+            <SwayFactor>1.22</SwayFactor>
+            <ShotSpread>0.13</ShotSpread>
+            <SightsEfficiency>1</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>50</Steel>
+            <ComponentIndustrial>5</ComponentIndustrial>
+        </costList>
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>True</hasStandardCommand>
+            <defaultProjectile>Bullet_9x19mmPara_FMJ</defaultProjectile>
+            <burstShotCount>6</burstShotCount>
+            <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+            <warmupTime>0.6</warmupTime>
+            <range>25</range>
+            <soundCast>HRK_Shot_MP40SMG</soundCast>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+            <recoilAmount>1.23</recoilAmount>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>32</magazineSize>
+            <reloadTime>4</reloadTime>
+            <ammoSet>AmmoSet_9x19mmPara</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aiAimMode>Snapshot</aiAimMode>
+            <aiUseBurstMode>FALSE</aiUseBurstMode>
+            <aimedBurstShotCount>3</aimedBurstShotCount>
+        </FireModes>
+        <weaponTags>
+            <li>CE_SMG</li>
+            <li>CE_AI_BROOM</li>
+        </weaponTags>
+    </Operation>
+
+    <!--===== HRK_StG44AR =====-->
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>HRK_StG44AR</defName>
+        <statBases>
+            <WorkToMake>28500</WorkToMake>
+            <Mass>4.6</Mass>
+            <Bulk>9.40</Bulk>
+            <SwayFactor>1.40</SwayFactor>
+            <ShotSpread>0.08</ShotSpread>
+            <SightsEfficiency>1</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <WoodLog>5</WoodLog>
+            <Steel>60</Steel>
+            <ComponentIndustrial>5</ComponentIndustrial>
+        </costList>
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>True</hasStandardCommand>
+            <defaultProjectile>Bullet_792x33mmKurz_FMJ</defaultProjectile>
+            <burstShotCount>6</burstShotCount>
+            <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+            <warmupTime>1.1</warmupTime>
+            <range>55</range>
+            <soundCast>HRK_Shot_StG44AR</soundCast>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+            <recoilAmount>1.54</recoilAmount>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>30</magazineSize>
+            <reloadTime>4</reloadTime>
+            <ammoSet>AmmoSet_792x33mmKurz</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aiAimMode>AimedShot</aiAimMode>
+            <aiUseBurstMode>TRUE</aiUseBurstMode>
+            <aimedBurstShotCount>3</aimedBurstShotCount>
+        </FireModes>
+        <weaponTags>
+            <li>CE_AI_AR</li>
+        </weaponTags>
+    </Operation>
+
+    <!--===== HRK_FG42LMGScoped =====-->
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>HRK_FG42LMGScoped</defName>
+        <statBases>
+            <WorkToMake>32500</WorkToMake>
+            <Mass>4.80</Mass>
+            <Bulk>9.45</Bulk>
+            <SwayFactor>1.47</SwayFactor>
+            <ShotSpread>0.07</ShotSpread>
+            <SightsEfficiency>2.24</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <WoodLog>5</WoodLog>
+            <Steel>60</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>True</hasStandardCommand>
+            <defaultProjectile>Bullet_792x57mmMauser_FMJ</defaultProjectile>
+            <burstShotCount>6</burstShotCount>
+            <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+            <warmupTime>1.3</warmupTime>
+            <range>62</range>
+            <soundCast>HRK_Shot_FG42LMG</soundCast>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+            <recoilAmount>1.92</recoilAmount>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>20</magazineSize>
+            <reloadTime>4</reloadTime>
+            <ammoSet>AmmoSet_792x57mmMauser</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aiAimMode>AimedShot</aiAimMode>
+            <aiUseBurstMode>TRUE</aiUseBurstMode>
+            <aimedBurstShotCount>3</aimedBurstShotCount>
+        </FireModes>
+        <weaponTags>
+            <li>CE_AI_AR</li>
+            <li>Bipod_Rifle</li>
+        </weaponTags>
+    </Operation>
+
+    <!--===== HRK_Karabiner98k =====-->
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>HRK_Karabiner98k</defName>
+        <statBases>
+            <WorkToMake>11500</WorkToMake>
+            <Mass>3.70</Mass>
+            <Bulk>11.10</Bulk>
+            <SwayFactor>1.48</SwayFactor>
+            <ShotSpread>0.05</ShotSpread>
+            <SightsEfficiency>1</SightsEfficiency>
+            <RangedWeapon_Cooldown>1.17</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <WoodLog>10</WoodLog>
+            <Steel>55</Steel>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </costList>
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>True</hasStandardCommand>
+            <defaultProjectile>Bullet_792x57mmMauser_FMJ</defaultProjectile>
+            <warmupTime>0.9</warmupTime>
+            <range>59</range>
+            <soundCast>HRK_Shot_Karabiner98k</soundCast>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+            <recoilAmount>2.22</recoilAmount>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>5</magazineSize>
+            <reloadTime>4.3</reloadTime>
+            <ammoSet>AmmoSet_792x57mmMauser</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aiAimMode>AimedShot</aiAimMode>
+            <aiUseBurstMode>FALSE</aiUseBurstMode>
+        </FireModes>
+        <weaponTags>
+            <li>CE_AI_SR</li>
+        </weaponTags>
+    </Operation>
+
+    <!--===== HRK_Karabiner98kSR =====-->
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>HRK_Karabiner98kSR</defName>
+        <statBases>
+            <WorkToMake>15500</WorkToMake>
+            <Mass>4.0</Mass>
+            <Bulk>11.10</Bulk>
+            <SwayFactor>1.55</SwayFactor>
+            <ShotSpread>0.05</ShotSpread>
+            <SightsEfficiency>2.24</SightsEfficiency>
+            <RangedWeapon_Cooldown>1.17</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <WoodLog>10</WoodLog>
+            <Steel>55</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>True</hasStandardCommand>
+            <defaultProjectile>Bullet_792x57mmMauser_FMJ</defaultProjectile>
+            <warmupTime>1.3</warmupTime>
+            <range>73</range>
+            <soundCast>HRK_Shot_Karabiner98k</soundCast>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+            <recoilAmount>2.14</recoilAmount>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>5</magazineSize>
+            <reloadTime>4.3</reloadTime>
+            <ammoSet>AmmoSet_792x57mmMauser</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aiAimMode>AimedShot</aiAimMode>
+            <aiUseBurstMode>FALSE</aiUseBurstMode>
+        </FireModes>
+        <weaponTags>
+            <li>CE_AI_SR</li>
+        </weaponTags>
+    </Operation>
+
+    <!--===== HRK_Karabiner98kGL =====-->
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>HRK_Karabiner98kGL</defName>
+                <statBases>
+                    <WorkToMake>10500</WorkToMake>
+                    <Mass>3.70</Mass>
+                    <Bulk>11.10</Bulk>
+                    <SwayFactor>1.48</SwayFactor>
+                    <ShotSpread>0.15</ShotSpread>
+                    <SightsEfficiency>1</SightsEfficiency>
+                    <RangedWeapon_Cooldown>1.22</RangedWeapon_Cooldown>
+                </statBases>
+                <costList>
+                    <WoodLog>10</WoodLog>
+                    <Steel>55</Steel>
+                    <ComponentIndustrial>1</ComponentIndustrial>
+                </costList>
+                <Properties>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>True</hasStandardCommand>
+                    <defaultProjectile>Bullet_30mmRifleGrenade_HE</defaultProjectile>
+                    <warmupTime>1.1</warmupTime>
+                    <range>35</range>
+                    <soundCast>HRK_Shot_Karabiner98kGL</soundCast>
+                    <soundCastTail>GunTail_Medium</soundCastTail>
+                    <muzzleFlashScale>9</muzzleFlashScale>
+                    <recoilAmount>3.74</recoilAmount>
+                    <targetParams>
+                        <canTargetLocations>true</canTargetLocations>
+                    </targetParams>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>1</magazineSize>
+                    <reloadTime>3.5</reloadTime>
+                    <ammoSet>AmmoSet_30mmRifleGrenade</ammoSet>
+                </AmmoUser>
+                <FireModes>
+                    <aiAimMode>SuppressFire</aiAimMode>
+                    <aiUseBurstMode>FALSE</aiUseBurstMode>
+                </FireModes>
+                <weaponTags>
+                    <li>CE_AI_AOE</li>
+                </weaponTags>
+            </li>
+
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName="HRK_Karabiner98kGL"]/comps</xpath>
+                <value>
+                    <li Class="CombatExtended.CompProperties_UnderBarrel">
+                        <propsUnderBarrel>
+                            <magazineSize>5</magazineSize>
+                            <reloadTime>4.3</reloadTime>
+                            <ammoSet>AmmoSet_792x57mmMauser</ammoSet>
+                        </propsUnderBarrel>
+                        <verbPropsUnderBarrel>
+                            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                            <hasStandardCommand>True</hasStandardCommand>
+                            <defaultProjectile>Bullet_792x57mmMauser_FMJ</defaultProjectile>
+                            <warmupTime>0.9</warmupTime>
+                            <range>59</range>
+                            <soundCast>HRK_Shot_Karabiner98k</soundCast>
+                            <soundCastTail>GunTail_Medium</soundCastTail>
+                            <muzzleFlashScale>9</muzzleFlashScale>
+                            <recoilAmount>2.22</recoilAmount>
+                        </verbPropsUnderBarrel>
+                        <propsFireModesUnderBarrel>
+                            <aiAimMode>AimedShot</aiAimMode>
+                            <aiUseBurstMode>FALSE</aiUseBurstMode>
+                        </propsFireModesUnderBarrel>
+                    </li>
+                </value>
+            </li>
+
+        </operations>
+    </Operation>
+
+    <!-- ==== HRK_G43RifleScoped ==== -->
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>HRK_G43RifleScoped</defName>
+        <statBases>
+            <Bulk>11.15</Bulk>
+            <Mass>5.00</Mass>
+            <SwayFactor>1.66</SwayFactor>
+            <ShotSpread>0.06</ShotSpread>
+            <SightsEfficiency>2.24</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+            <WorkToMake>23000</WorkToMake>
+        </statBases>
+        <costList>
+            <WoodLog>10</WoodLog>
+            <Steel>60</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <range>55</range>
+            <warmupTime>1.1</warmupTime>
+            <defaultProjectile>Bullet_792x57mmMauser_FMJ</defaultProjectile>
+            <soundCast>HRK_Shot_G43Rifle</soundCast>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+            <recoilAmount>1.90</recoilAmount>
+        </Properties>
+        <AmmoUser>
+            <reloadTime>4</reloadTime>
+            <magazineSize>10</magazineSize>
+            <ammoSet>AmmoSet_792x57mmMauser</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aiUseBurstMode>FALSE</aiUseBurstMode>
+            <aiAimMode>AimedShot</aiAimMode>
+        </FireModes>
+        <weaponTags>
+            <li>CE_AI_SR</li>
+        </weaponTags>
+    </Operation>
+
+    <!--===== HRK_MG34LMGDoubleDrum =====-->
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>HRK_MG34LMGDoubleDrum</defName>
+        <statBases>
+            <WorkToMake>33000</WorkToMake>
+            <Mass>12.10</Mass>
+            <Bulk>14.19</Bulk>
+            <SwayFactor>1.70</SwayFactor>
+            <ShotSpread>0.04</ShotSpread>
+            <SightsEfficiency>1</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <WoodLog>10</WoodLog>
+            <Steel>95</Steel>
+            <ComponentIndustrial>5</ComponentIndustrial>
+        </costList>
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>True</hasStandardCommand>
+            <defaultProjectile>Bullet_792x57mmMauser_FMJ</defaultProjectile>
+            <burstShotCount>10</burstShotCount>
+            <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+            <warmupTime>1.3</warmupTime>
+            <range>62</range>
+            <soundCast>HRK_Shot_MG34LMG</soundCast>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+            <recoilAmount>1.19</recoilAmount>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+            <recoilPattern>Mounted</recoilPattern>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>75</magazineSize>
+            <reloadTime>4.9</reloadTime>
+            <ammoSet>AmmoSet_792x57mmMauser</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aiAimMode>SuppressFire</aiAimMode>
+            <aiUseBurstMode>FALSE</aiUseBurstMode>
+            <aimedBurstShotCount>5</aimedBurstShotCount>
+            <noSingleShot>true</noSingleShot>
+        </FireModes>
+        <weaponTags>
+            <li>CE_MachineGun</li>
+            <li>CE_AI_LMG</li>
+            <li>Bipod_Rifle</li>
+        </weaponTags>
+    </Operation>
+
+    <!--===== HRK_MG42LMG =====-->
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>HRK_MG42LMG</defName>
+        <statBases>
+            <WorkToMake>33000</WorkToMake>
+            <Mass>11.60</Mass>
+            <Bulk>14.20</Bulk>
+            <SwayFactor>1.67</SwayFactor>
+            <ShotSpread>0.06</ShotSpread>
+            <SightsEfficiency>1.00</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <WoodLog>10</WoodLog>
+            <Steel>95</Steel>
+            <ComponentIndustrial>5</ComponentIndustrial>
+        </costList>
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>True</hasStandardCommand>
+            <defaultProjectile>Bullet_792x57mmMauser_FMJ</defaultProjectile>
+            <burstShotCount>10</burstShotCount>
+            <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+            <warmupTime>1.3</warmupTime>
+            <range>62</range>
+            <soundCast>HRK_Shot_MG42LMG</soundCast>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+            <recoilAmount>1.20</recoilAmount>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+            <recoilPattern>Mounted</recoilPattern>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>50</magazineSize>
+            <reloadTime>4.9</reloadTime>
+            <ammoSet>AmmoSet_792x57mmMauser</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aiAimMode>SuppressFire</aiAimMode>
+            <aiUseBurstMode>FALSE</aiUseBurstMode>
+            <aimedBurstShotCount>5</aimedBurstShotCount>
+            <noSingleShot>true</noSingleShot>
+        </FireModes>
+        <weaponTags>
+            <li>CE_MachineGun</li>
+            <li>CE_AI_LMG</li>
+            <li>Bipod_LMG</li>
+        </weaponTags>
+    </Operation>
+
+    <!--===== HRK_Panzerbuchse39ATRifle =====-->
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>HRK_Panzerbuchse39ATRifle</defName>
+        <statBases>
+            <WorkToMake>19000</WorkToMake>
+            <Mass>12.60</Mass>
+            <Bulk>13.80</Bulk>
+            <SwayFactor>2.02</SwayFactor>
+            <ShotSpread>0.01</ShotSpread>
+            <SightsEfficiency>1.0</SightsEfficiency>
+            <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <WoodLog>5</WoodLog>
+            <Steel>100</Steel>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </costList>
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>True</hasStandardCommand>
+            <defaultProjectile>Bullet_792x94mmPatronen_HE</defaultProjectile>
+            <warmupTime>2.8</warmupTime>
+            <range>78</range>
+            <soundCast>HRK_Shot_Panzerbuchse39ATRifle</soundCast>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+            <recoilAmount>1.67</recoilAmount>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>10</magazineSize>
+            <reloadTime>4.3</reloadTime>
+            <ammoSet>AmmoSet_792x94mmPatronen</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aiAimMode>AimedShot</aiAimMode>
+            <aiUseBurstMode>FALSE</aiUseBurstMode>
+        </FireModes>
+        <weaponTags>
+            <li>Bipod_AMR</li>
+        </weaponTags>
+    </Operation>
+
+    <!--===== HRK_Panzerschreck =====-->
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>HRK_Panzerschreck</defName>
+        <statBases>
+            <WorkToMake>27000</WorkToMake>
+            <Mass>11.00</Mass>
+            <Bulk>17.40</Bulk>
+            <SwayFactor>2.74</SwayFactor>
+            <ShotSpread>0.2</ShotSpread>
+            <SightsEfficiency>1.0</SightsEfficiency>
+            <RangedWeapon_Cooldown>1.50</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>110</Steel>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>True</hasStandardCommand>
+            <defaultProjectile>Bullet_88mmRPzB_HEAT</defaultProjectile>
+            <warmupTime>1.9</warmupTime>
+            <range>40</range>
+            <soundCast>HRK_Shot_Panzerschreck</soundCast>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>1</magazineSize>
+            <reloadTime>8.6</reloadTime>
+            <ammoSet>AmmoSet_88mmRPzBRocket</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aiAimMode>AimedShot</aiAimMode>
+            <aiUseBurstMode>FALSE</aiUseBurstMode>
+        </FireModes>
+        <weaponTags>
+            <li>CE_AI_SR</li>
+        </weaponTags>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/RecipeDef[defName="MakeAmmo_88mmRPzB_HEAT"]</xpath>
+        <value>
+            <researchPrerequisite>Machining</researchPrerequisite>
+        </value>
+    </Operation>
+
+    <!--===== REMOVE DRAWBACKS =====-->
+    <Operation Class="PatchOperationRemove">
+        <xpath>Defs/ThingDef[defName="HRK_Panzerschreck" or defName="HRK_Panzerbuchse39ATRifle"]/equippedStatOffsets/MoveSpeed</xpath>
+    </Operation>
+
+</Patch>

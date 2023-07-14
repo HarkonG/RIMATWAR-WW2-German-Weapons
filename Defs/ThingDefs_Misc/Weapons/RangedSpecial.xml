@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+    <!-- ======================= [Flammenwerfer 41] ========================== -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>HRK_Bullet_FmW41Flamethrower</defName>
+        <label>Flammenwerfer 41 fuel</label>
+        <graphicData>
+            <texPath>Things/Projectile/HRK_Proj_Flamethrower</texPath>
+            <graphicClass>Graphic_Flicker</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <speed>30</speed>
+            <arcHeightFactor>1</arcHeightFactor>
+            <shadowSize>1</shadowSize>
+            <damageDef>HRK__DamageDef_Flamethrower</damageDef>
+            <explosionRadius>0.9</explosionRadius>
+            <soundExplode>HRK_Shot_WW2Flamethrower</soundExplode>
+            <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+            <preExplosionSpawnChance>0.5</preExplosionSpawnChance>
+            <ai_IsIncendiary>true</ai_IsIncendiary>
+            <explosionChanceToStartFire>1.0</explosionChanceToStartFire>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="HRK_RimAtWar_German_BaseHumanMakeableGun">
+        <defName>HRK_FmW41Flamethrower</defName>
+        <label>Flammenwerfer 41</label>
+        <description>The Flammenwerfer 41 was the standard German flamethrower it performed a similar role of other flamethrowers of the time, namely clearing enemy trenches and buildings in highly fortified areas.\n\nThis weapon is somewhat WIP, in a future update you'll need to equip your pawn with a proper fuel backpack to be able to use it.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_FmW41Flamethrower</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1</drawSize>
+        </graphicData>
+        <soundInteract>HRK_Interact_WW2Flamethrower</soundInteract>
+        <tickerType>Normal</tickerType>
+        <generateCommonality>0.1</generateCommonality>
+        <statBases>
+            <WorkToMake>9000</WorkToMake>
+            <Mass>2.2</Mass>
+            <RangedWeapon_Cooldown>5.9</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>75</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <recipeMaker>
+            <skillRequirements>
+                <Crafting>4</Crafting>
+            </skillRequirements>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <researchPrerequisite>Gunsmithing</researchPrerequisite>
+        </recipeMaker>
+        <relicChance>0</relicChance>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>HRK_Bullet_FmW41Flamethrower</defaultProjectile>
+                <warmupTime>1.0</warmupTime>
+                <range>9.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <burstShotCount>15</burstShotCount>
+                <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+                <soundCast>HRK_Shot_WW2Flamethrower</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>14</muzzleFlashScale>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+</Defs>

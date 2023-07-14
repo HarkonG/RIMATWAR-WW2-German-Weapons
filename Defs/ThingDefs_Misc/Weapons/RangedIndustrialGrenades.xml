@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+    <!-- ======================= [M24 (Frag)] ========================== -->
+    <ThingDef ParentName="BaseGrenadeProjectile">
+        <defName>HRK_Proj_Stielhandgranate24Grenade</defName>
+        <label>M24 frag grenade</label>
+        <thingClass>Projectile_Explosive</thingClass>
+        <graphicData>
+            <texPath>Things/Projectile/HRK_Stielhandgranate24Grenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>1.9</explosionRadius >
+            <damageDef>Bomb</damageDef>
+            <!-- Use default damage from explosion def -->
+            <explosionDelay>100</explosionDelay>
+            <soundExplode>HRK_Explosion_FragGrenade</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseMakeableGrenade">
+        <defName>HRK_Stielhandgranate24Grenade</defName>
+        <label>M24 frag grenades</label>
+        <description>The M24 was the standard hand grenade of the German Wehrmacht during World War II.</description>
+        <recipeMaker>
+            <researchPrerequisite>Machining</researchPrerequisite>
+        </recipeMaker>
+        <relicChance>0</relicChance>
+        <tickerType>Normal</tickerType>
+        <thingCategories>
+            <li>HRK_Category_RimAtWarGrenades_Germany</li>
+            <li>Grenades</li>
+        </thingCategories>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_Stielhandgranate24GrenadeBelt</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <Mass>1</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+            <WorkToMake>12000</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>10</Steel>
+            <Chemfuel>80</Chemfuel>
+            <WoodLog>10</WoodLog>
+        </costList>
+        <weaponTags>
+            <li>GrenadeDestructive</li>
+        </weaponTags>
+        <smeltable>true</smeltable>
+        <verbs>
+            <li>
+                <label>throw M24 frag grenade</label>
+                <verbClass>Verb_LaunchProjectile</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>12.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.5</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>HRK_Proj_Stielhandgranate24Grenade</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>2.66</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- ======================= [M24 bundle (Frag)] ========================== -->
+    <ThingDef ParentName="BaseGrenadeProjectile">
+        <defName>HRK_Proj_StielhandgranateBundleGrenade</defName>
+        <label>M24 frag grenade bundle</label>
+        <thingClass>Projectile_Explosive</thingClass>
+        <graphicData>
+            <texPath>Things/Projectile/HRK_StielhandgranateBundleGrenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>2.9</explosionRadius >
+            <damageDef>Bomb</damageDef>
+            <!-- Use default damage from explosion def -->
+            <explosionDelay>30</explosionDelay>
+            <soundExplode>HRK_Explosion_FragGrenade</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseMakeableGrenade">
+        <defName>HRK_StielhandgranateBundleGrenade</defName>
+        <label>M24 frag grenade bundle</label>
+        <description>The M24 was the standard hand grenade of the German Wehrmacht during World War II.</description>
+        <recipeMaker>
+            <researchPrerequisite>Machining</researchPrerequisite>
+        </recipeMaker>
+        <relicChance>0</relicChance>
+        <tickerType>Normal</tickerType>
+        <thingCategories>
+            <li>HRK_Category_RimAtWarGrenades_Germany</li>
+            <li>Grenades</li>
+        </thingCategories>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_StielhandgranateBundleGrenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <Mass>1</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+            <WorkToMake>300</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>10</Steel>
+            <HRK_Stielhandgranate24Grenade>1</HRK_Stielhandgranate24Grenade>
+        </costList>
+        <weaponTags>
+            <li>GrenadeDestructive</li>
+        </weaponTags>
+        <smeltable>true</smeltable>
+        <verbs>
+            <li>
+                <label>throw M24 frag grenade bundle</label>
+                <verbClass>Verb_LaunchProjectile</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>10.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.5</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>HRK_Proj_StielhandgranateBundleGrenade</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>2.66</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- ======================= [PWM (Impact)] ========================== -->
+    <ThingDef ParentName="BaseGrenadeProjectile">
+        <defName>HRK_Proj_PanzerwurfmineGrenade</defName>
+        <label>PWM impact grenade</label>
+        <thingClass>Projectile_Explosive</thingClass>
+        <graphicData>
+            <texPath>Things/Projectile/HRK_PanzerwurfmineGrenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>1.9</explosionRadius >
+            <damageDef>Bomb</damageDef>
+            <!-- Use default damage from explosion def -->
+            <!--<explosionDelay>100</explosionDelay>-->
+            <explosionDelay>0</explosionDelay>
+            <soundExplode>HRK_Explosion_FragGrenade</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseMakeableGrenade">
+        <defName>HRK_PanzerwurfmineGrenade</defName>
+        <label>PWM impact grenades</label>
+        <description>The Panzerwurfmine (abbreviated to PWM) was a shaped charge hand-thrown anti-tank grenade used by Luftwaffe ground troops in World War II.</description>
+        <recipeMaker>
+            <researchPrerequisite>Machining</researchPrerequisite>
+        </recipeMaker>
+        <relicChance>0</relicChance>
+        <tickerType>Normal</tickerType>
+        <thingCategories>
+            <li>HRK_Category_RimAtWarGrenades_Germany</li>
+            <li>Grenades</li>
+        </thingCategories>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_PanzerwurfmineGrenadeBelt</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <Mass>1</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+            <WorkToMake>13000</WorkToMake>
+        </statBases>
+        <costList>
+            <Cloth>25</Cloth>
+            <Chemfuel>90</Chemfuel>
+        </costList>
+        <weaponTags>
+            <li>GrenadeDestructive</li>
+        </weaponTags>
+        <smeltable>true</smeltable>
+        <verbs>
+            <li>
+                <label>throw PWM impact grenade</label>
+                <verbClass>Verb_LaunchProjectile</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>10</range>
+                <forcedMissRadius>2.9</forcedMissRadius>
+                <warmupTime>1.5</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>HRK_Proj_PanzerwurfmineGrenade</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>2.66</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- ======================= [3KG pioneer charge (Demo Charge)] ========================== -->
+    <ThingDef ParentName="BaseGrenadeProjectile">
+        <defName>HRK_Proj_GeballteLadungGrenade</defName>
+        <label>3KG pioneer explosive charge</label>
+        <thingClass>Projectile_Explosive</thingClass>
+        <graphicData>
+            <texPath>Things/Projectile/HRK_GeballteLadungGrenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>3.9</explosionRadius >
+            <damageDef>Bomb</damageDef>
+            <!-- Use default damage from explosion def -->
+            <explosionDelay>250</explosionDelay>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseMakeableGrenade">
+        <defName>HRK_GeballteLadungGrenade</defName>
+        <label>3kg pioneer explosive charge</label>
+        <description>The 3KG pioneer charge was an explosive timed device used by germany during World War II.</description>
+        <equippedAngleOffset>15</equippedAngleOffset>
+        <recipeMaker>
+            <researchPrerequisite>Machining</researchPrerequisite>
+        </recipeMaker>
+        <relicChance>0</relicChance>
+        <tickerType>Normal</tickerType>
+        <thingCategories>
+            <li>HRK_Category_RimAtWarGrenades_Germany</li>
+            <li>Grenades</li>
+        </thingCategories>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_GeballteLadungGrenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <Mass>1</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+            <WorkToMake>3000</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>75</Steel>
+            <Chemfuel>130</Chemfuel>
+        </costList>
+        <weaponTags Inherit="False">
+        </weaponTags>
+        <smeltable>true</smeltable>
+        <verbs>
+            <li>
+                <label>throw 3KG pioneer charge explosive charge</label>
+                <verbClass>Verb_LaunchProjectile</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>3</range>
+                <forcedMissRadius>0.7</forcedMissRadius>
+                <warmupTime>2.8</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>HRK_Proj_GeballteLadungGrenade</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>7.68</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

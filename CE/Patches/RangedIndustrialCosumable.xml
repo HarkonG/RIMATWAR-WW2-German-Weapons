@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+  <!--===== TOOLS FOR THE TOOL GOD =====-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="HRK_Panzerfaust"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>barrel</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>10</power>
+          <cooldownTime>2.44</cooldownTime>
+          <armorPenetrationBlunt>3.5</armorPenetrationBlunt>
+          <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+
+  <!-- ========== Panzerfaust ========== -->
+
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/ThingDef[defName="HRK_Panzerfaust"]</xpath>
+    <attribute>ParentName</attribute>
+    <value>BaseEquipment</value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="HRK_Panzerfaust"]</xpath>
+    <value>
+      <stackLimit>25</stackLimit>
+    </value>
+  </Operation>
+
+  <!-- Kill recipe maker -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/ThingDef[defName="HRK_Panzerfaust"]/recipeMaker</xpath>
+  </Operation>
+
+  <!-- Patch stats -->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>HRK_Panzerfaust</defName>
+    <statBases>
+      <Mass>10.00</Mass>
+      <RangedWeapon_Cooldown>1.50</RangedWeapon_Cooldown>
+      <SightsEfficiency>1.00</SightsEfficiency>
+      <ShotSpread>0.2</ShotSpread>
+      <SwayFactor>1.60</SwayFactor>
+      <Bulk>9.0</Bulk>
+      <MarketValue>64</MarketValue>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Panzerfaust</defaultProjectile>
+      <warmupTime>1.9</warmupTime>
+      <range>31</range>
+      <burstShotCount>1</burstShotCount>
+      <soundCast>HRK_Shot_Panzerfaust</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <onlyManualCast>true</onlyManualCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+      <muzzleFlashScale>14</muzzleFlashScale>
+    </Properties>
+    <FireModes>
+      <aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+      <li>CE_AI_AOE</li>
+    </weaponTags>
+  </Operation>
+
+</Patch>

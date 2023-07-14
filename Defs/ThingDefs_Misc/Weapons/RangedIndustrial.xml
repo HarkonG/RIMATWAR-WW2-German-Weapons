@@ -1,0 +1,1166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+    <!-- ======================= [Luger P08] ========================== -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>HRK_Bullet_P08Luger</defName>
+        <label>Luger P08 bullet</label>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Small</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>10</damageAmountBase>
+            <armorPenetrationBase>0.15</armorPenetrationBase>
+            <stoppingPower>0.5</stoppingPower>
+            <speed>55</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="HRK_RimAtWar_German_BaseHumanMakeableGun">
+        <defName>HRK_P08Luger</defName>
+        <label>Luger P08</label>
+        <description>The Pistole Parabellum , commonly known as just the Luger, is a toggle-locked recoil-operated semi-automatic pistol.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_P08Luger_Silver</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.0</drawSize>
+            <drawOffsetNorth>(0.0, 0.0, 0.0)</drawOffsetNorth>
+            <drawOffsetSouth>(0.0, 0.0, 0.0)</drawOffsetSouth>
+            <drawOffsetEast>(0.05, 0.0, 0.0)</drawOffsetEast>
+            <drawOffsetWest>(-0.05, 0.0, 0.0)</drawOffsetWest>
+        </graphicData>
+        <uiIconScale>1.5</uiIconScale>
+        <soundInteract>HRK_Interact_P08Luger</soundInteract>
+        <recipeMaker>
+            <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>4</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <statBases>
+            <WorkToMake>4000</WorkToMake>
+            <Mass>1</Mass>
+            <AccuracyTouch>0.80</AccuracyTouch>
+            <AccuracyShort>0.65</AccuracyShort>
+            <AccuracyMedium>0.35</AccuracyMedium>
+            <AccuracyLong>0.25</AccuracyLong>
+            <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>25</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+            <WoodLog>5</WoodLog>
+        </costList>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>HRK_Bullet_P08Luger</defaultProjectile>
+                <warmupTime>0.2</warmupTime>
+                <range>24</range>
+                <soundCast>HRK_Shot_P08Luger</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>grip</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <weaponClasses>
+            <li>RangedLight</li>
+        </weaponClasses>
+        <weaponTags>
+            <li>SimpleGun</li>
+            <li>Autopistol</li>
+        </weaponTags>
+    </ThingDef>
+
+    <!-- ======================= [MP 40 SMG] ========================== -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>HRK_Bullet_MP40SMG</defName>
+        <label>MP 40 bullet</label>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Small</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>12</damageAmountBase>
+            <armorPenetrationBase>0.18</armorPenetrationBase>
+            <stoppingPower>0.5</stoppingPower>
+            <speed>48</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="HRK_RimAtWar_German_BaseHumanMakeableGun">
+        <defName>HRK_MP40SMG</defName>
+        <label>MP 40</label>
+        <description>The MP 40 is a submachine gun chambered for the 9x19mm Parabellum cartridge. It was developed in Germany and used extensively by the Axis powers during World War II.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_MP40SMG_Black</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.0</drawSize>
+            <drawOffsetNorth>(0.0, 0.0, 0.0)</drawOffsetNorth>
+            <drawOffsetSouth>(0.0, 0.0, 0.0)</drawOffsetSouth>
+            <drawOffsetEast>(0.12, 0.0, 0.0)</drawOffsetEast>
+            <drawOffsetWest>(-0.12, 0.0, 0.0)</drawOffsetWest>
+        </graphicData>
+        <uiIconPath>UI/Weapons/HRK_MP40SMG_Black</uiIconPath>
+        <equippedAngleOffset>45</equippedAngleOffset>
+        <uiIconScale>1.1</uiIconScale>
+        <soundInteract>HRK_Interact_MP40SMG</soundInteract>
+        <recipeMaker>
+            <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <statBases>
+            <WorkToMake>20000</WorkToMake>
+            <Mass>3.5</Mass>
+            <AccuracyTouch>0.80</AccuracyTouch>
+            <AccuracyShort>0.60</AccuracyShort>
+            <AccuracyMedium>0.30</AccuracyMedium>
+            <AccuracyLong>0.15</AccuracyLong>
+            <RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>75</Steel>
+            <ComponentIndustrial>3</ComponentIndustrial>
+            <WoodLog>10</WoodLog>
+        </costList>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>HRK_Bullet_MP40SMG</defaultProjectile>
+                <warmupTime>0.9</warmupTime>
+                <range>21</range>
+                <burstShotCount>3</burstShotCount>
+                <ticksBetweenBurstShots>11</ticksBetweenBurstShots>
+                <soundCast>HRK_Shot_MP40SMG</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>grip</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <weaponClasses>
+            <li>ShortShots</li>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <weaponTags>
+            <li>SimpleGun</li>
+            <li>ShortShots</li>
+        </weaponTags>
+    </ThingDef>
+
+    <!-- ======================= [StG 44] ========================== -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>HRK_Bullet_StG44AR</defName>
+        <label>StG 44 bullet</label>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Small</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>11</damageAmountBase>
+            <stoppingPower>0.5</stoppingPower>
+            <speed>70</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="HRK_RimAtWar_German_BaseHumanMakeableGun">
+        <defName>HRK_StG44AR</defName>
+        <label>StG 44</label>
+        <description>The StG 44 was the first successful assault rifle, with features including an intermediate cartridge, controllable automatic fire, a more compact design than a battle rifle with a higher rate of fire, and being designed primarily for hitting targets within a few hundred metres.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_StG44AR</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.1</drawSize>
+            <drawOffsetNorth>(0.0, 0.0, 0.0)</drawOffsetNorth>
+            <drawOffsetSouth>(0.0, 0.0, 0.0)</drawOffsetSouth>
+            <drawOffsetEast>(0.16, 0.0, 0.0)</drawOffsetEast>
+            <drawOffsetWest>(-0.16, 0.0, 0.0)</drawOffsetWest>
+        </graphicData>
+        <uiIconPath>UI/Weapons/HRK_StG44AR</uiIconPath>
+        <equippedAngleOffset>45</equippedAngleOffset>
+        <soundInteract>HRK_Interact_StG44AR</soundInteract>
+        <recipeMaker>
+            <researchPrerequisite>GasOperation</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <statBases>
+            <WorkToMake>15000</WorkToMake>
+            <Mass>1.7</Mass>
+            <AccuracyTouch>0.55</AccuracyTouch>
+            <AccuracyShort>0.65</AccuracyShort>
+            <AccuracyMedium>0.60</AccuracyMedium>
+            <AccuracyLong>0.50</AccuracyLong>
+            <RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>50</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+            <WoodLog>20</WoodLog>
+        </costList>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>HRK_Bullet_StG44AR</defaultProjectile>
+                <warmupTime>1.0</warmupTime>
+                <range>28</range>
+                <burstShotCount>3</burstShotCount>
+                <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+                <soundCast>HRK_Shot_StG44AR</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <weaponTags>
+            <li>SimpleGun</li>
+            <li>AssaultRifle</li>
+        </weaponTags>
+    </ThingDef>
+
+    <!-- ======================= [FG 42] ========================== -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>HRK_Bullet_FG42LMG</defName>
+        <label>FG 42 bullet</label>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Small</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>12</damageAmountBase>
+            <armorPenetrationBase>0.18</armorPenetrationBase>
+            <stoppingPower>1.0</stoppingPower>
+            <speed>60</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="HRK_RimAtWar_German_BaseHumanMakeableGun">
+        <defName>HRK_FG42LMGScoped</defName>
+        <label>FG 42</label>
+        <description>The FG 42 is a selective-fire 7.92x57mm Mauser automatic rifle. It combined the characteristics and firepower of a LMG in a lightweight form. It is considered one of the most advanced weapon designs of World War II.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_FG42LMGScoped_Late</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.0</drawSize>
+            <drawOffsetNorth>(0.0, 0.0, 0.0)</drawOffsetNorth>
+            <drawOffsetSouth>(0.0, 0.0, 0.0)</drawOffsetSouth>
+            <drawOffsetEast>(0.16, 0.0, 0.0)</drawOffsetEast>
+            <drawOffsetWest>(-0.16, 0.0, 0.0)</drawOffsetWest>
+        </graphicData>
+        <uiIconPath>UI/Weapons/HRK_FG42LMGScoped_Late</uiIconPath>
+        <equippedAngleOffset>45</equippedAngleOffset>
+        <soundInteract>HRK_Interact_FG42LMG</soundInteract>
+        <recipeMaker>
+            <researchPrerequisite>HRK_Research_BasicScopes</researchPrerequisite>
+            <researchPrerequisites>
+                <li>HRK_Research_BasicScopes</li>
+                <li>BlowbackOperation</li>
+            </researchPrerequisites>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <statBases>
+            <WorkToMake>38000</WorkToMake>
+            <Mass>4</Mass>
+            <AccuracyTouch>0.52</AccuracyTouch>
+            <AccuracyShort>0.62</AccuracyShort>
+            <AccuracyMedium>0.72</AccuracyMedium>
+            <AccuracyLong>0.57</AccuracyLong>
+            <RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>50</Steel>
+            <ComponentIndustrial>7</ComponentIndustrial>
+            <WoodLog>20</WoodLog>
+        </costList>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>HRK_Bullet_FG42LMG</defaultProjectile>
+                <warmupTime>1.2</warmupTime>
+                <range>33</range>
+                <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+                <burstShotCount>3</burstShotCount>
+                <soundCast>HRK_Shot_FG42LMG</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <weaponTags>
+            <li>SimpleGun</li>
+        </weaponTags>
+    </ThingDef>
+
+    <!-- ======================= [Karabiner 98k] ========================== -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>HRK_Bullet_Karabiner98k</defName>
+        <label>Karabiner 98k rifle bullet</label>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>18</damageAmountBase>
+            <armorPenetrationBase>0.27</armorPenetrationBase>
+            <stoppingPower>1.5</stoppingPower>
+            <speed>70</speed>
+        </projectile>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_big</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="HRK_RimAtWar_German_BaseHumanMakeableGun">
+        <defName>HRK_Karabiner98k</defName>
+        <label>Karabiner 98k rifle</label>
+        <description>The Type 99 rifle was a frontline rifle developed around the mid-20th century to replace the less powerful Type 38.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_Karabiner98k</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.2</drawSize>
+            <drawOffsetNorth>(0.0, 0.0, 0.0)</drawOffsetNorth>
+            <drawOffsetSouth>(0.0, 0.0, 0.0)</drawOffsetSouth>
+            <drawOffsetEast>(0.28, 0.0, 0.0)</drawOffsetEast>
+            <drawOffsetWest>(-0.28, 0.0, 0.0)</drawOffsetWest>
+        </graphicData>
+        <uiIconPath>UI/Weapons/HRK_Karabiner98k</uiIconPath>
+        <equippedAngleOffset>45</equippedAngleOffset>
+        <soundInteract>HRK_Interact_Karabiner98k</soundInteract>
+        <statBases>
+            <WorkToMake>11000</WorkToMake>
+            <Mass>3.2</Mass>
+            <AccuracyTouch>0.70</AccuracyTouch>
+            <AccuracyShort>0.80</AccuracyShort>
+            <AccuracyMedium>0.85</AccuracyMedium>
+            <AccuracyLong>0.75</AccuracyLong>
+            <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>55</Steel>
+            <ComponentIndustrial>3</ComponentIndustrial>
+            <WoodLog>10</WoodLog>
+        </costList>
+        <recipeMaker>
+            <researchPrerequisite>Gunsmithing</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>HRK_Bullet_Karabiner98k</defaultProjectile>
+                <warmupTime>1.5</warmupTime>
+                <range>38</range>
+                <soundCast>HRK_Shot_Karabiner98k</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <weaponClasses>
+            <li>LongShots</li>
+        </weaponClasses>
+        <weaponTags>
+            <li>SimpleGun</li>
+        </weaponTags>
+    </ThingDef>
+
+    <!-- ======================= [Karabiner 98k Sniper] ========================== -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>HRK_Bullet_Karabiner98kSR</defName>
+        <label>Karabiner 98k sniper bullet</label>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Big</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>23</damageAmountBase>
+            <armorPenetrationBase>0.33</armorPenetrationBase>
+            <stoppingPower>1.5</stoppingPower>
+            <speed>100</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="HRK_RimAtWar_German_BaseHumanMakeableGun">
+        <defName>HRK_Karabiner98kSR</defName>
+        <label>Karabiner 98k sniper</label>
+        <description>The Karabiner 98k sniper rifle is a Japanese sniper rifle used during the Second World War. It is a sniper version of the Type 99 rifle, chambered in the 7.7x58mm round.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_Karabiner98kSR</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.2</drawSize>
+            <drawOffsetNorth>(0.0, 0.0, 0.0)</drawOffsetNorth>
+            <drawOffsetSouth>(0.0, 0.0, 0.0)</drawOffsetSouth>
+            <drawOffsetEast>(0.28, 0.0, 0.0)</drawOffsetEast>
+            <drawOffsetWest>(-0.28, 0.0, 0.0)</drawOffsetWest>
+        </graphicData>
+        <uiIconPath>UI/Weapons/HRK_Karabiner98kSR</uiIconPath>
+        <equippedAngleOffset>45</equippedAngleOffset>
+        <soundInteract>HRK_Interact_Karabiner98k</soundInteract>
+        <recipeMaker>
+            <researchPrerequisite>HRK_Research_BasicScopes</researchPrerequisite>
+            <researchPrerequisites>
+                <li>HRK_Research_BasicScopes</li>
+                <li>Gunsmithing</li>
+            </researchPrerequisites>
+            <skillRequirements>
+                <Crafting>6</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <statBases>
+            <WorkToMake>40000</WorkToMake>
+            <Mass>4</Mass>
+            <AccuracyTouch>0.35</AccuracyTouch>
+            <AccuracyShort>0.65</AccuracyShort>
+            <AccuracyMedium>0.81</AccuracyMedium>
+            <AccuracyLong>0.83</AccuracyLong>
+            <RangedWeapon_Cooldown>2.3</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>55</Steel>
+            <ComponentIndustrial>7</ComponentIndustrial>
+            <WoodLog>15</WoodLog>
+        </costList>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>HRK_Bullet_Karabiner98kSR</defaultProjectile>
+                <warmupTime>3.6</warmupTime>
+                <range>43</range>
+                <soundCast>HRK_Shot_Karabiner98k</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <weaponClasses>
+            <li>LongShots</li>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <weaponTags Inherit="False">
+            <li>SniperRifle</li>
+        </weaponTags>
+    </ThingDef>
+
+    <!-- ======================= [Karabiner 98k rifle grenade] ========================== -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>HRK_Bullet_Karabiner98kGL</defName>
+        <label>Karabiner 98k rifle grenade</label>
+        <graphicData>
+            <texPath>Things/Projectile/LauncherShot/Shared/HE</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <speed>40</speed>
+            <damageDef>Bomb</damageDef>
+            <!-- Use default damage from explosion def -->
+            <explosionRadius>1.9</explosionRadius>
+            <preExplosionSpawnThingDef>Filth_RubbleRock</preExplosionSpawnThingDef>
+            <preExplosionSpawnChance>0.3</preExplosionSpawnChance>
+            <ai_IsIncendiary>false</ai_IsIncendiary>
+            <arcHeightFactor>0.55</arcHeightFactor>
+            <shadowSize>0.6</shadowSize>
+            <explosionDelay>0</explosionDelay>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="HRK_RimAtWar_German_BaseHumanMakeableGun">
+        <defName>HRK_Karabiner98kGL</defName>
+        <label>Karabiner 98k rifle grenade</label>
+        <description>The Karabiner 98k rifle grenade launcher is an attachment for the Japanese Type 38 and Type 99 rifles that allow them to fire special hollow charge grenades. The launcher sits over the end of the barrel, held in place with a clamping device. A special crimped blank cartridge or wooden bullet is used to fire the grenades.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_Karabiner98kGL</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.2</drawSize>
+            <drawOffsetNorth>(0.0, 0.0, 0.0)</drawOffsetNorth>
+            <drawOffsetSouth>(0.0, 0.0, 0.0)</drawOffsetSouth>
+            <drawOffsetEast>(0.28, 0.0, 0.0)</drawOffsetEast>
+            <drawOffsetWest>(-0.28, 0.0, 0.0)</drawOffsetWest>
+        </graphicData>
+        <uiIconPath>UI/Weapons/HRK_Karabiner98kGL</uiIconPath>
+        <equippedAngleOffset>45</equippedAngleOffset>
+        <soundInteract>HRK_Interact_Karabiner98k</soundInteract>
+        <generateCommonality>0.3</generateCommonality>
+        <statBases>
+            <WorkToMake>9000</WorkToMake>
+            <Mass>3.4</Mass>
+            <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>79</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+            <WoodLog>15</WoodLog>
+        </costList>
+        <recipeMaker>
+            <researchPrerequisite>Gunsmithing</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>4</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>HRK_Bullet_Karabiner98kGL</defaultProjectile>
+                <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <warmupTime>3.5</warmupTime>
+                <range>24</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>HRK_Shot_Karabiner98kGL</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>14</muzzleFlashScale>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <weaponTags>
+            <li>GunHeavy</li>
+            <li>SimpleGun</li>
+        </weaponTags>
+    </ThingDef>
+
+    <!-- ========== [Gewehr 43] ========== -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>HRK_Bullet_G43Rifle</defName>
+        <label>Gewehr 43 bullet</label>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>15</damageAmountBase>
+            <speed>60</speed>
+            <stoppingPower>1.5</stoppingPower>
+        </projectile>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_big</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
+
+    <!-- ========== [Gewehr 43 scoped] ========== -->
+    <ThingDef ParentName="HRK_RimAtWar_German_BaseHumanMakeableGun">
+        <defName>HRK_G43RifleScoped</defName>
+        <label>Gewehr 43 scoped</label>
+        <description>The Gewehr 43 is a 7.92x57mm Mauser caliber semi-automatic rifle developed by Germany during World War II.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_G43RifleScoped</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.2</drawSize>
+            <drawOffsetNorth>(0.0, 0.0, 0.0)</drawOffsetNorth>
+            <drawOffsetSouth>(0.0, 0.0, 0.0)</drawOffsetSouth>
+            <drawOffsetEast>(0.24, 0.0, 0.0)</drawOffsetEast>
+            <drawOffsetWest>(-0.24, 0.0, 0.0)</drawOffsetWest>
+        </graphicData>
+        <uiIconPath>UI/Weapons/HRK_G43RifleScoped</uiIconPath>
+        <equippedAngleOffset>45</equippedAngleOffset>
+        <soundInteract>HRK_Interact_G43Rifle</soundInteract>
+        <statBases>
+            <WorkToMake>10000</WorkToMake>
+            <Mass>1.2</Mass>
+            <AccuracyTouch>0.65</AccuracyTouch>
+            <AccuracyShort>0.70</AccuracyShort>
+            <AccuracyMedium>0.80</AccuracyMedium>
+            <AccuracyLong>0.70</AccuracyLong>
+            <RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>50</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+            <WoodLog>10</WoodLog>
+        </costList>
+        <recipeMaker>
+            <researchPrerequisite>HRK_Research_BasicScopes</researchPrerequisite>
+            <researchPrerequisites>
+                <li>HRK_Research_BasicScopes</li>
+                <li>BlowbackOperation</li>
+            </researchPrerequisites>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <skillRequirements>
+                <Crafting>4</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>HRK_Bullet_G43Rifle</defaultProjectile>
+                <warmupTime>1.2</warmupTime>
+                <range>34</range>
+                <soundCast>HRK_Shot_G43Rifle</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>6</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>grip</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <weaponClasses>
+            <li>LongShots</li>
+        </weaponClasses>
+        <weaponTags>
+            <li>SimpleGun</li>
+        </weaponTags>
+    </ThingDef>
+
+    <!-- ======================= [MG 34] ========================== -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>HRK_Bullet_MG34LMG</defName>
+        <label>MG 34 bullet</label>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Small</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>8</damageAmountBase>
+            <armorPenetrationBase>0.17</armorPenetrationBase>
+            <stoppingPower>1</stoppingPower>
+            <speed>55</speed>
+        </projectile>
+    </ThingDef>
+
+    <!-- ======================= [MG 34 double drum] ========================== -->
+    <ThingDef ParentName="HRK_RimAtWar_German_BaseHumanMakeableGun">
+        <defName>HRK_MG34LMGDoubleDrum</defName>
+        <label>MG 34 double drum</label>
+        <description>The MG 34 is a German recoil-operated air-cooled general-purpose machine gun, it is generally considered the world's first general-purpose machine gun.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_MG34LMGDoubleDrum</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.2</drawSize>
+            <drawOffsetNorth>(0.0, 0.0, 0.0)</drawOffsetNorth>
+            <drawOffsetSouth>(0.0, 0.0, 0.0)</drawOffsetSouth>
+            <drawOffsetEast>(0.28, 0.0, 0.0)</drawOffsetEast>
+            <drawOffsetWest>(-0.28, 0.0, 0.0)</drawOffsetWest>
+        </graphicData>
+        <uiIconPath>UI/Weapons/HRK_MG34LMGDoubleDrum</uiIconPath>
+        <equippedAngleOffset>45</equippedAngleOffset>
+        <soundInteract>HRK_Interact_MG34LMG</soundInteract>
+        <recipeMaker>
+            <researchPrerequisite>GasOperation</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>6</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <statBases>
+            <WorkToMake>35000</WorkToMake>
+            <Mass>8</Mass>
+            <AccuracyTouch>0.32</AccuracyTouch>
+            <AccuracyShort>0.33</AccuracyShort>
+            <AccuracyMedium>0.32</AccuracyMedium>
+            <AccuracyLong>0.26</AccuracyLong>
+            <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>75</Steel>
+            <ComponentIndustrial>5</ComponentIndustrial>
+            <WoodLog>20</WoodLog>
+        </costList>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>HRK_Bullet_MG34LMG</defaultProjectile>
+                <warmupTime>1.2</warmupTime>
+                <range>25</range>
+                <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                <burstShotCount>8</burstShotCount>
+                <soundCast>HRK_Shot_MG34LMG</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <weaponTags>
+            <li>SimpleGun</li>
+        </weaponTags>
+    </ThingDef>
+
+    <!-- ======================= [MG 42] ========================== -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>HRK_Bullet_MG42LMG</defName>
+        <label>MG 42 bullet</label>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Small</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>8</damageAmountBase>
+            <armorPenetrationBase>0.17</armorPenetrationBase>
+            <stoppingPower>1</stoppingPower>
+            <speed>55</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="HRK_RimAtWar_German_BaseHumanMakeableGun">
+        <defName>HRK_MG42LMG</defName>
+        <label>MG 42</label>
+        <description>The MG 42 is a light machine gun used by the Imperial Japanese Army in World War II. It was similar in design to the earlier Type 96 light machine gun, but designed to fire the new and more powerful 7.7 mm Arisaka cartridge, which improved energy by over 50%. Like the Type 96, the Type 99 traces its history to the ZB vz. 26, which also inspired the British Bren light machine gun.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_MG42LMG</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.2</drawSize>
+            <drawOffsetNorth>(0.0, 0.0, 0.0)</drawOffsetNorth>
+            <drawOffsetSouth>(0.0, 0.0, 0.0)</drawOffsetSouth>
+            <drawOffsetEast>(0.28, 0.0, 0.0)</drawOffsetEast>
+            <drawOffsetWest>(-0.28, 0.0, 0.0)</drawOffsetWest>
+        </graphicData>
+        <uiIconPath>UI/Weapons/HRK_MG42LMG</uiIconPath>
+        <equippedAngleOffset>45</equippedAngleOffset>
+        <soundInteract>HRK_Interact_MG42LMG</soundInteract>
+        <recipeMaker>
+            <researchPrerequisite>GasOperation</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>6</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <statBases>
+            <WorkToMake>35000</WorkToMake>
+            <Mass>8</Mass>
+            <AccuracyTouch>0.35</AccuracyTouch>
+            <AccuracyShort>0.38</AccuracyShort>
+            <AccuracyMedium>0.32</AccuracyMedium>
+            <AccuracyLong>0.26</AccuracyLong>
+            <RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>75</Steel>
+            <ComponentIndustrial>5</ComponentIndustrial>
+            <WoodLog>20</WoodLog>
+        </costList>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>HRK_Bullet_MG42LMG</defaultProjectile>
+                <warmupTime>1.6</warmupTime>
+                <range>26</range>
+                <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                <burstShotCount>8</burstShotCount>
+                <soundCast>HRK_Shot_MG42LMG</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <weaponTags>
+            <li>SimpleGun</li>
+        </weaponTags>
+    </ThingDef>
+
+    <!-- ======================= [Panzerbuchse 39] ========================== -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>HRK_Bullet_Panzerbuchse39ATRifle</defName>
+        <label>Panzerbuchse 39 blast</label>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Big</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>56</damageAmountBase>
+            <armorPenetrationBase>0.9</armorPenetrationBase>
+            <stoppingPower>3</stoppingPower>
+            <speed>65</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="HRK_RimAtWar_German_BaseHumanMakeableGun">
+        <defName>HRK_Panzerbuchse39ATRifle</defName>
+        <label>Panzerbuchse 39</label>
+        <description>German anti-tank rifles were created in response to the appearance of the first British tanks on the Western Front.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_Panzerbuchse39ATRifle</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.3</drawSize>
+            <drawOffsetNorth>(0.0, 0.0, 0.0)</drawOffsetNorth>
+            <drawOffsetSouth>(0.0, 0.0, 0.0)</drawOffsetSouth>
+            <drawOffsetEast>(0.36, 0.0, 0.0)</drawOffsetEast>
+            <drawOffsetWest>(-0.36, 0.0, 0.0)</drawOffsetWest>
+        </graphicData>
+        <uiIconPath>UI/Weapons/HRK_Panzerbuchse39ATRifle</uiIconPath>
+        <equippedAngleOffset>45</equippedAngleOffset>
+        <generateCommonality>0.1</generateCommonality>
+        <soundInteract>HRK_Interact_Panzerbuchse39ATRifle</soundInteract>
+        <recipeMaker>
+            <researchPrerequisite>Gunsmithing</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <statBases>
+            <WorkToMake>50000</WorkToMake>
+            <Mass>8</Mass>
+            <AccuracyTouch>0.40</AccuracyTouch>
+            <AccuracyShort>0.38</AccuracyShort>
+            <AccuracyMedium>0.62</AccuracyMedium>
+            <AccuracyLong>0.74</AccuracyLong>
+            <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>150</Steel>
+            <ComponentIndustrial>14</ComponentIndustrial>
+            <WoodLog>35</WoodLog>
+        </costList>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>HRK_Bullet_Panzerbuchse39ATRifle</defaultProjectile>
+                <warmupTime>2.4</warmupTime>
+                <range>30</range>
+                <soundCast>HRK_Shot_Panzerbuchse39ATRifle</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <weaponClasses>
+            <li>LongShots</li>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <weaponTags Inherit="False">            <!-- make sure no other raiders wield this monstrum -->
+            <li>SniperRifle</li>
+        </weaponTags>
+        <equippedStatOffsets>
+            <MoveSpeed>-0.25</MoveSpeed>            <!-- drawback -->
+        </equippedStatOffsets>
+    </ThingDef>
+
+    <!-- ======================= [Panzerschreck Rocket Launcher] ========================== -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>HRK_Bullet_Panzerschreck</defName>
+        <label>Panzerschreck rocket</label>
+        <graphicData>
+            <texPath>Things/Projectile/HRK_Panzerschreck</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <damageDef>Bomb</damageDef>
+            <!-- Use default damage from explosion def -->
+            <explosionRadius>1.9</explosionRadius>
+            <speed>40</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="HRK_RimAtWar_German_BaseHumanMakeableGun">
+        <defName>HRK_Panzerschreck</defName>
+        <label>Panzerschreck</label>
+        <description>The Panzerschreck was designed as a lightweight infantry anti-tank weapon and was an enlarged copy of the American bazooka. The weapon was shoulder-launched and fired a fin-stabilized rocket with a shaped-charge warhead.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_Panzerschreck</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.2</drawSize>
+            <drawOffsetNorth>(0.0, 0.0, 0.0)</drawOffsetNorth>
+            <drawOffsetSouth>(0.0, 0.0, 0.0)</drawOffsetSouth>
+            <drawOffsetEast>(0.0, 0.0, 0.1)</drawOffsetEast>
+            <drawOffsetWest>(0.0, 0.0, 0.1)</drawOffsetWest>
+        </graphicData>
+        <uiIconPath>UI/Weapons/HRK_Panzerschreck</uiIconPath>
+        <equippedAngleOffset>45</equippedAngleOffset>
+        <soundInteract>HRK_Interact_Panzerschreck</soundInteract>
+        <generateCommonality>0.2</generateCommonality>
+        <statBases>
+            <WorkToMake>15000</WorkToMake>
+            <Mass>7</Mass>
+            <RangedWeapon_Cooldown>5.5</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>100</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <recipeMaker>
+            <researchPrerequisite>Gunsmithing</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>6</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <relicChance>0</relicChance>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>HRK_Bullet_Panzerschreck</defaultProjectile>
+                <warmupTime>5.5</warmupTime>
+                <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <range>33</range>
+                <forcedMissRadius>2.9</forcedMissRadius>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>HRK_Shot_Panzerschreck</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>14</muzzleFlashScale>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <weaponTags>
+            <li>GunHeavy</li>
+        </weaponTags>
+        <equippedStatOffsets>
+            <MoveSpeed>-0.25</MoveSpeed>            <!-- drawback -->
+        </equippedStatOffsets>
+    </ThingDef>
+
+</Defs>
