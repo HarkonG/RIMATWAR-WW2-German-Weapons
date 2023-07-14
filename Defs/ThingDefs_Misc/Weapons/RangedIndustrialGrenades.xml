@@ -102,7 +102,7 @@
     <ThingDef ParentName="BaseMakeableGrenade">
         <defName>HRK_StielhandgranateBundleGrenade</defName>
         <label>M24 frag grenade bundle</label>
-        <description>The M24 was the standard hand grenade of the German Wehrmacht during World War II.</description>
+        <description>The M24 lacked effectiveness against hard targets such as tanks and buildings. A common solution was an improvised "bundle charge", the heads of a number of M24 grenades would be strapped around a complete grenade.</description>
         <recipeMaker>
             <researchPrerequisite>Machining</researchPrerequisite>
         </recipeMaker>

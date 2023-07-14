@@ -22,7 +22,7 @@
     <ThingDef ParentName="HRK_RimAtWar_German_BaseHumanMakeableGun">
         <defName>HRK_P08Luger</defName>
         <label>Luger P08</label>
-        <description>The Pistole Parabellum , commonly known as just the Luger, is a toggle-locked recoil-operated semi-automatic pistol.</description>
+        <description>The Pistole Parabellum, commonly known as just the Luger, is a toggle-locked recoil-operated semi-automatic pistol.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/WeaponRanged/HRK_P08Luger_Silver</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -403,7 +403,7 @@
     <ThingDef ParentName="HRK_RimAtWar_German_BaseHumanMakeableGun">
         <defName>HRK_Karabiner98k</defName>
         <label>Karabiner 98k rifle</label>
-        <description>The Type 99 rifle was a frontline rifle developed around the mid-20th century to replace the less powerful Type 38.</description>
+        <description>The Karabiner 98 kurz is a bolt-action rifle chambered for the 7.92x57mm Mauser cartridge it was the primary German service rifle during World War II.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/WeaponRanged/HRK_Karabiner98k</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -495,7 +495,7 @@
     <ThingDef ParentName="HRK_RimAtWar_German_BaseHumanMakeableGun">
         <defName>HRK_Karabiner98kSR</defName>
         <label>Karabiner 98k sniper</label>
-        <description>The Karabiner 98k sniper rifle is a Japanese sniper rifle used during the Second World War. It is a sniper version of the Type 99 rifle, chambered in the 7.7x58mm round.</description>
+        <description>The Karabiner 98 kurz is a bolt-action rifle chambered for the 7.92x57mm Mauser cartridge it was the primary German service rifle during World War II. Some of these rifles were outfitted with ZF4s scopes or similar to be used by snipers.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/WeaponRanged/HRK_Karabiner98kSR</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -598,7 +598,7 @@
     <ThingDef ParentName="HRK_RimAtWar_German_BaseHumanMakeableGun">
         <defName>HRK_Karabiner98kGL</defName>
         <label>Karabiner 98k rifle grenade</label>
-        <description>The Karabiner 98k rifle grenade launcher is an attachment for the Japanese Type 38 and Type 99 rifles that allow them to fire special hollow charge grenades. The launcher sits over the end of the barrel, held in place with a clamping device. A special crimped blank cartridge or wooden bullet is used to fire the grenades.</description>
+        <description>The Schiessbecher o "shooting cup" was a German grenade launcher of World War II.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/WeaponRanged/HRK_Karabiner98kGL</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -892,7 +892,7 @@
     <ThingDef ParentName="HRK_RimAtWar_German_BaseHumanMakeableGun">
         <defName>HRK_MG42LMG</defName>
         <label>MG 42</label>
-        <description>The MG 42 is a light machine gun used by the Imperial Japanese Army in World War II. It was similar in design to the earlier Type 96 light machine gun, but designed to fire the new and more powerful 7.7 mm Arisaka cartridge, which improved energy by over 50%. Like the Type 96, the Type 99 traces its history to the ZB vz. 26, which also inspired the British Bren light machine gun.</description>
+        <description>The MG 42 is a recoil-operated air-cooled general-purpose machine gun used extensively by the Germans the during the second half of World War II.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/WeaponRanged/HRK_MG42LMG</texPath>
             <graphicClass>Graphic_Single</graphicClass>
