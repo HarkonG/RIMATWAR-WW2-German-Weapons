@@ -4,7 +4,7 @@
     <Operation Class="XmlExtensions.OptionalPatch">
         <modId>Harkon.RIMATWAR.WW2GermanWeapons</modId>
         <key>HRK_P08Luger</key>
-        <defaultValue>true</defaultValue>
+        <defaultValue>false</defaultValue>
         <caseTrue>
             <Operation Class="PatchOperationSequence">
                 <operations>
@@ -44,7 +44,7 @@
     <Operation Class="XmlExtensions.OptionalPatch">
         <modId>Harkon.RIMATWAR.WW2GermanWeapons</modId>
         <key>HRK_MP40SMG</key>
-        <defaultValue>true</defaultValue>
+        <defaultValue>false</defaultValue>
         <caseTrue>
             <Operation Class="PatchOperationSequence">
                 <operations>
@@ -84,7 +84,7 @@
     <Operation Class="XmlExtensions.OptionalPatch">
         <modId>Harkon.RIMATWAR.WW2GermanWeapons</modId>
         <key>HRK_StG44AR</key>
-        <defaultValue>true</defaultValue>
+        <defaultValue>false</defaultValue>
         <caseTrue>
             <Operation Class="PatchOperationSequence">
                 <operations>
@@ -124,7 +124,7 @@
     <Operation Class="XmlExtensions.OptionalPatch">
         <modId>Harkon.RIMATWAR.WW2GermanWeapons</modId>
         <key>HRK_G43RifleScoped</key>
-        <defaultValue>true</defaultValue>
+        <defaultValue>false</defaultValue>
         <caseTrue>
             <Operation Class="PatchOperationSequence">
                 <operations>
@@ -164,7 +164,7 @@
     <Operation Class="XmlExtensions.OptionalPatch">
         <modId>Harkon.RIMATWAR.WW2GermanWeapons</modId>
         <key>HRK_FG42LMGScoped</key>
-        <defaultValue>true</defaultValue>
+        <defaultValue>false</defaultValue>
         <caseTrue>
             <Operation Class="PatchOperationSequence">
                 <operations>
@@ -204,7 +204,7 @@
     <Operation Class="XmlExtensions.OptionalPatch">
         <modId>Harkon.RIMATWAR.WW2GermanWeapons</modId>
         <key>HRK_Karabiner98k</key>
-        <defaultValue>true</defaultValue>
+        <defaultValue>false</defaultValue>
         <caseTrue>
             <Operation Class="PatchOperationSequence">
                 <operations>

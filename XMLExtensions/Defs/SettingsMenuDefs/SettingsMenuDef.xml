@@ -37,19 +37,19 @@
                     <li Class="XmlExtensions.Setting.Checkbox">
                         <label>FG 42 scoped LMG</label>
                         <key>HRK_FG42LMGScoped</key>
-                        <defaultValue>true</defaultValue>
+                        <defaultValue>false</defaultValue>
                     </li>
 
                     <li Class="XmlExtensions.Setting.Checkbox">
                         <label>Gewehr 43 scoped</label>
                         <key>HRK_G43RifleScoped</key>
-                        <defaultValue>true</defaultValue>
+                        <defaultValue>false</defaultValue>
                     </li>
 
                     <li Class="XmlExtensions.Setting.Checkbox">
                         <label>Karabiner 98k / Kar 98k rifle grenade / Kar 98k sniper </label>
                         <key>HRK_Karabiner98k</key>
-                        <defaultValue>true</defaultValue>
+                        <defaultValue>false</defaultValue>
                     </li>
 
                 </leftCol>
@@ -58,19 +58,19 @@
                     <li Class="XmlExtensions.Setting.Checkbox">
                         <label>MP 40 SMG</label>
                         <key>HHRK_MP40SMG</key>
-                        <defaultValue>true</defaultValue>
+                        <defaultValue>false</defaultValue>
                     </li>
 
                     <li Class="XmlExtensions.Setting.Checkbox">
                         <label>Luger P08</label>
                         <key>HRK_P08Luger</key>
-                        <defaultValue>true</defaultValue>
+                        <defaultValue>false</defaultValue>
                     </li>
 
                     <li Class="XmlExtensions.Setting.Checkbox">
                         <label>StG 44 ARs</label>
                         <key>HRK_StG44AR</key>
-                        <defaultValue>true</defaultValue>
+                        <defaultValue>false</defaultValue>
                     </li>
 
                 </rightCol>
