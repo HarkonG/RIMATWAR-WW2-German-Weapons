@@ -24,7 +24,7 @@
         <label>Luger P08</label>
         <description>The Pistole Parabellum, commonly known as just the Luger, is a toggle-locked recoil-operated semi-automatic pistol.</description>
         <graphicData>
-            <texPath>Things/Item/Equipment/WeaponRanged/HRK_P08Luger_Silver</texPath>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_P08Luger</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>1.0</drawSize>
             <drawOffsetNorth>(0.0, 0.0, 0.0)</drawOffsetNorth>
@@ -116,7 +116,7 @@
         <label>MP 40</label>
         <description>The MP 40 is a submachine gun chambered for the 9x19mm Parabellum cartridge. It was developed in Germany and used extensively by the Axis powers during World War II.</description>
         <graphicData>
-            <texPath>Things/Item/Equipment/WeaponRanged/HRK_MP40SMG_Black</texPath>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_MP40SMG</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>1.0</drawSize>
             <drawOffsetNorth>(0.0, 0.0, 0.0)</drawOffsetNorth>
@@ -124,7 +124,7 @@
             <drawOffsetEast>(0.12, 0.0, 0.0)</drawOffsetEast>
             <drawOffsetWest>(-0.12, 0.0, 0.0)</drawOffsetWest>
         </graphicData>
-        <uiIconPath>UI/Weapons/HRK_MP40SMG_Black</uiIconPath>
+        <uiIconPath>UI/Weapons/HRK_MP40SMG</uiIconPath>
         <equippedAngleOffset>45</equippedAngleOffset>
         <uiIconScale>1.1</uiIconScale>
         <soundInteract>HRK_Interact_MP40SMG</soundInteract>
@@ -304,7 +304,7 @@
         <label>FG 42</label>
         <description>The FG 42 is a selective-fire 7.92x57mm Mauser automatic rifle. It combined the characteristics and firepower of a LMG in a lightweight form. It is considered one of the most advanced weapon designs of World War II.</description>
         <graphicData>
-            <texPath>Things/Item/Equipment/WeaponRanged/HRK_FG42LMGScoped_Late</texPath>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_FG42LMGScoped</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>1.0</drawSize>
             <drawOffsetNorth>(0.0, 0.0, 0.0)</drawOffsetNorth>
@@ -312,7 +312,7 @@
             <drawOffsetEast>(0.16, 0.0, 0.0)</drawOffsetEast>
             <drawOffsetWest>(-0.16, 0.0, 0.0)</drawOffsetWest>
         </graphicData>
-        <uiIconPath>UI/Weapons/HRK_FG42LMGScoped_Late</uiIconPath>
+        <uiIconPath>UI/Weapons/HRK_FG42LMGScoped</uiIconPath>
         <equippedAngleOffset>45</equippedAngleOffset>
         <soundInteract>HRK_Interact_FG42LMG</soundInteract>
         <recipeMaker>
