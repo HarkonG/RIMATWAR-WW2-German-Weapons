@@ -61,7 +61,7 @@
             <texPath>Things/Item/Equipment/WeaponRanged/HRK_P08Luger_Alt</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
-        <uiIconPath>UI/Weapons/HRK_P08Luger_Alt</uiIconPath>
+        <!--<uiIconPath>UI/Weapons/HRK_P08Luger_Alt</uiIconPath>-->
     </ThingStyleDef>
 
     <ThingStyleDef>
