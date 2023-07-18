@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingStyleDef>
+        <defName>HRK_FG42LMGScoped_Alt</defName>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_FG42LMGScoped_Alt</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconPath>UI/Weapons/HRK_FG42LMGScoped_Alt</uiIconPath>
+    </ThingStyleDef>
+
+    <ThingStyleDef>
+        <defName>HRK_G43RifleScoped_Alt</defName>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_G43RifleScoped_Alt</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconPath>UI/Weapons/HRK_G43RifleScoped_Alt</uiIconPath>
+    </ThingStyleDef>
+
+    <ThingStyleDef>
+        <defName>HRK_Karabiner98k_Alt</defName>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_Karabiner98k_Alt</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconPath>UI/Weapons/HRK_Karabiner98k_Alt</uiIconPath>
+    </ThingStyleDef>
+
+    <ThingStyleDef>
+        <defName>HRK_Karabiner98kGL_Alt</defName>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_Karabiner98kGL_Alt</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconPath>UI/Weapons/HRK_Karabiner98kGL_Alt</uiIconPath>
+    </ThingStyleDef>
+
+    <ThingStyleDef>
+        <defName>HRK_Karabiner98kSR_Alt</defName>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_Karabiner98kSR_Alt</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconPath>UI/Weapons/HRK_Karabiner98kSR_Alt</uiIconPath>
+    </ThingStyleDef>
+
+    <ThingStyleDef>
+        <defName>HRK_MP40SMG_Alt</defName>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_MP40SMG_Alt</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconPath>UI/Weapons/HRK_MP40SMG_Alt</uiIconPath>
+    </ThingStyleDef>
+
+    <ThingStyleDef>
+        <defName>HRK_P08Luger_Alt</defName>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_P08Luger_Alt</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconPath>UI/Weapons/HRK_P08Luger_Alt</uiIconPath>
+    </ThingStyleDef>
+
+    <ThingStyleDef>
+        <defName>HRK_StG44AR_Alt</defName>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_StG44AR_Alt</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconPath>UI/Weapons/HRK_StG44AR_Alt</uiIconPath>
+    </ThingStyleDef>
+
+</Defs>

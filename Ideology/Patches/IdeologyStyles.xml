@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/StyleCategoryDef[defName="HRK_StyleCat_RimAtWar"]/thingDefStyles</xpath>
+        <value>
+            <li>
+                <thingDef>HRK_FG42LMGScoped</thingDef>
+                <styleDef>HRK_FG42LMGScoped_Alt</styleDef>
+            </li>
+            <li>
+                <thingDef>HRK_G43RifleScoped</thingDef>
+                <styleDef>HRK_G43RifleScoped_Alt</styleDef>
+            </li>
+            <li>
+                <thingDef>HRK_Karabiner98k</thingDef>
+                <styleDef>HRK_Karabiner98k_Alt</styleDef>
+            </li>
+            <li>
+                <thingDef>HRK_Karabiner98kGL</thingDef>
+                <styleDef>HRK_Karabiner98kGL_Alt</styleDef>
+            </li>
+            <li>
+                <thingDef>HRK_Karabiner98kSR</thingDef>
+                <styleDef>HRK_Karabiner98kSR_Alt</styleDef>
+            </li>
+            <li>
+                <thingDef>HRK_MP40SMG</thingDef>
+                <styleDef>HRK_MP40SMG_Alt</styleDef>
+            </li>
+            <li>
+                <thingDef>HRK_P08Luger</thingDef>
+                <styleDef>HRK_P08Luger_Alt</styleDef>
+            </li>
+            <li>
+                <thingDef>HRK_StG44AR</thingDef>
+                <styleDef>HRK_StG44AR_Alt</styleDef>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>
