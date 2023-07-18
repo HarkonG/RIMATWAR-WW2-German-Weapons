@@ -301,7 +301,7 @@
 
     <ThingDef ParentName="HRK_RimAtWar_German_BaseHumanMakeableGun">
         <defName>HRK_FG42LMGScoped</defName>
-        <label>FG 42</label>
+        <label>FG 42 scoped</label>
         <description>The FG 42 is a selective-fire 7.92x57mm Mauser automatic rifle. It combined the characteristics and firepower of a LMG in a lightweight form. It is considered one of the most advanced weapon designs of World War II.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/WeaponRanged/HRK_FG42LMGScoped</texPath>
