@@ -2,120 +2,119 @@
 
 <Defs>
 
-  <!-- ======================= [Panzerfaust] ========================== -->
-  <ThingDef ParentName="BaseBullet">
-    <defName>HRK_Bullet_Panzerfaust</defName>
-    <label>Panzerfaust warhead</label>
-    <graphicData>
-      <texPath>Things/Projectile/HRK_Panzerfaust</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>TransparentPostLight</shaderType>
-    </graphicData>
-    <thingClass>Projectile_Explosive</thingClass>
-    <projectile>
-      <damageDef>Bomb</damageDef>
-      <!-- Use default damage from explosion def -->
-      <explosionRadius>1.9</explosionRadius>
-      <speed>50</speed>
-    </projectile>
-  </ThingDef>
+    <!-- ======================= [Panzerfaust] ========================== -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>HRK_Bullet_Panzerfaust</defName>
+        <label>Panzerfaust warhead</label>
+        <graphicData>
+            <texPath>Things/Projectile/HRK_Panzerfaust</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <damageDef>Bomb</damageDef>
+            <!-- Use default damage from explosion def -->
+            <explosionRadius>1.9</explosionRadius>
+            <speed>50</speed>
+        </projectile>
+    </ThingDef>
 
-  <ThingDef ParentName="BaseGun">
-    <defName>HRK_Panzerfaust</defName>
-    <label>Panzerfaust</label>
-    <description>The Panzerfaust was a development family of single-shot man-portable anti-tank systems developed by Germany during World War II.</description>
-    <tickerType>Normal</tickerType>
-    <techLevel>Industrial</techLevel>
-    <smeltable>false</smeltable>
-    <graphicData>
-      <texPath>Things/Item/Equipment/WeaponRanged/HRK_Panzerfaust</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1.1</drawSize>
-      <drawOffsetNorth>(0.0, 0.0, 0.0)</drawOffsetNorth>
-      <drawOffsetSouth>(0.0, 0.0, 0.0)</drawOffsetSouth>
-      <drawOffsetEast>(-0.25, 0.0, 0.0)</drawOffsetEast>
-      <drawOffsetWest>(0.25, 0.0, 0.0)</drawOffsetWest>
-    </graphicData>
-    <soundInteract>HRK_Interact_Panzerfaust</soundInteract>
-    <recipeMaker>
-      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-      <workSkill>Crafting</workSkill>
-      <effectWorking>Smith</effectWorking>
-      <soundWorking>Recipe_Smith</soundWorking>
-      <recipeUsers>
-        <li>TableMachining</li>
-      </recipeUsers>
-      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
-      <researchPrerequisite>Machining</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>4</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-    <statBases>
-      <WorkToMake>7000</WorkToMake>
-      <Mass>3.5</Mass>
-      <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
-    </statBases>
-    <costList>
-      <Steel>50</Steel>
-      <ComponentIndustrial>1</ComponentIndustrial>
-    </costList>
-    <verbs>
-      <li>
-        <verbClass>Verb_ShootOneUse</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>HRK_Bullet_Panzerfaust</defaultProjectile>
-        <forcedMissRadius>1.9</forcedMissRadius>
-        <warmupTime>3.5</warmupTime>
-        <ai_AvoidFriendlyFireRadius>8</ai_AvoidFriendlyFireRadius>
-        <range>35.9</range>
-        <burstShotCount>1</burstShotCount>
-        <soundCast>HRK_Shot_Panzerfaust</soundCast>
-        <soundCastTail>GunTail_Heavy</soundCastTail>
-        <onlyManualCast>true</onlyManualCast>
-        <targetParams>
-          <canTargetLocations>true</canTargetLocations>
-        </targetParams>
-        <muzzleFlashScale>14</muzzleFlashScale>
-      </li>
-    </verbs>
-    <tools>
-      <li>
-        <label>barrel</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>11.7</power>
-        <cooldownTime>2.6</cooldownTime>
-      </li>
-    </tools>
-    <comps>
-      <li Class="CompProperties_Explosive">
-        <explosiveRadius>1.9</explosiveRadius>
-        <explosiveDamageType>Bomb</explosiveDamageType>
-        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
-      </li>
-      <li Class="CompProperties_Biocodable"/>
-    </comps>
-    <thingCategories Inherit="False">
-      <li>HRK_Category_RimAtWarWeaponsRanged_Germany</li>
-    </thingCategories>
-    <weaponTags>
-      <li>Gun</li>
-      <li>GunSingleUse</li>
-    </weaponTags>
-    <weaponClasses>
-      <li>RangedHeavy</li>
-    </weaponClasses>
-    <tradeTags>
-      <li>ExoticMisc</li>
-      <li>WeaponRanged</li>
-    </tradeTags>
-    <thingSetMakerTags>
-      <li>SingleUseWeapon</li>
-      <li>RewardStandardLowFreq</li>
-    </thingSetMakerTags>
-    <relicChance>0</relicChance>
-  </ThingDef>
+    <ThingDef ParentName="BaseGun">
+        <defName>HRK_Panzerfaust</defName>
+        <label>Panzerfaust</label>
+        <description>The Panzerfaust was a development family of single-shot man-portable anti-tank systems developed by Germany during World War II.</description>
+        <tickerType>Normal</tickerType>
+        <techLevel>Industrial</techLevel>
+        <smeltable>false</smeltable>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/HRK_Panzerfaust</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.1</drawSize>
+            <drawOffsetNorth>(0.0, 0.0, 0.0)</drawOffsetNorth>
+            <drawOffsetSouth>(0.0, 0.0, 0.0)</drawOffsetSouth>
+            <drawOffsetEast>(-0.25, 0.0, 0.0)</drawOffsetEast>
+            <drawOffsetWest>(0.25, 0.0, 0.0)</drawOffsetWest>
+        </graphicData>
+        <soundInteract>HRK_Interact_Panzerfaust</soundInteract>
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+            <researchPrerequisite>Machining</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>4</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <statBases>
+            <WorkToMake>7000</WorkToMake>
+            <Mass>3.5</Mass>
+            <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>50</Steel>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </costList>
+        <verbs>
+            <li>
+                <verbClass>Verb_ShootOneUse</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>HRK_Bullet_Panzerfaust</defaultProjectile>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>3.5</warmupTime>
+                <ai_AvoidFriendlyFireRadius>8</ai_AvoidFriendlyFireRadius>
+                <range>35.9</range>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>HRK_Shot_Panzerfaust</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <onlyManualCast>true</onlyManualCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <muzzleFlashScale>14</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>11.7</power>
+                <cooldownTime>2.6</cooldownTime>
+            </li>
+        </tools>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>1.9</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+            <li Class="CompProperties_Biocodable"/>
+        </comps>
+        <thingCategories Inherit="False">
+            <li>HRK_Category_RimAtWarWeaponsRanged_Germany</li>
+        </thingCategories>
+        <weaponTags Inherit="False">
+            <li>GunSingleUse</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <tradeTags>
+            <li>ExoticMisc</li>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <thingSetMakerTags>
+            <li>SingleUseWeapon</li>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <relicChance>0</relicChance>
+    </ThingDef>
 
 </Defs>

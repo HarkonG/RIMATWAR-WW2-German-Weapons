@@ -224,7 +224,7 @@
         <equippedAngleOffset>45</equippedAngleOffset>
         <soundInteract>HRK_Interact_StG44AR</soundInteract>
         <recipeMaker>
-            <researchPrerequisite>GasOperation</researchPrerequisite>
+            <researchPrerequisite>BlowbackOperation</researchPrerequisite>
             <skillRequirements>
                 <Crafting>5</Crafting>
             </skillRequirements>

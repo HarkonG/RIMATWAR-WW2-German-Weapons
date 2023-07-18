@@ -58,7 +58,7 @@
       <hasStandardCommand>true</hasStandardCommand>
       <defaultProjectile>Bullet_Panzerfaust</defaultProjectile>
       <warmupTime>1.9</warmupTime>
-      <range>31</range>
+      <range>15</range>
       <burstShotCount>1</burstShotCount>
       <soundCast>HRK_Shot_Panzerfaust</soundCast>
       <soundCastTail>GunTail_Medium</soundCastTail>
