@@ -47,8 +47,7 @@
                     <explosionRadius>1.5</explosionRadius>
                     <damageDef>Bomb</damageDef>
                     <damageAmountBase>56</damageAmountBase>
-                    <explosionDelay>60</explosionDelay>                    
-                    <casingMoteDefname>Mote_GrenadePin</casingMoteDefname>
+                    <explosionDelay>60</explosionDelay>
                     <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
                     <speed>10</speed>
                     <soundExplode>HRK_Explosion_FragGrenade</soundExplode>

@@ -6,6 +6,7 @@
         <thingCategories Inherit="False">
             <li>HRK_Category_RimAtWarWeaponsRanged_Germany</li>
         </thingCategories>
+        <uiIconScale>1.2</uiIconScale>
     </ThingDef>
 
 </Defs>
