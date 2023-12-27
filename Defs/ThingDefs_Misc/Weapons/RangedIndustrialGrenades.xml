@@ -290,7 +290,7 @@
         <smeltable>true</smeltable>
         <verbs>
             <li>
-                <label>throw 3KG pioneer charge explosive charge</label>
+                <label>throw 3KG pioneer explosive charge</label>
                 <verbClass>Verb_LaunchProjectile</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
                 <range>3</range>

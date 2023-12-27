@@ -126,7 +126,6 @@
         </graphicData>
         <uiIconPath>UI/Weapons/HRK_MP40SMG</uiIconPath>
         <equippedAngleOffset>45</equippedAngleOffset>
-        <uiIconScale>1.1</uiIconScale>
         <soundInteract>HRK_Interact_MP40SMG</soundInteract>
         <recipeMaker>
             <researchPrerequisite>BlowbackOperation</researchPrerequisite>
