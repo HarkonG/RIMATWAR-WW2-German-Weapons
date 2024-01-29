@@ -298,7 +298,7 @@
     <Operation Class="PatchOperationAdd">
         <xpath>Defs</xpath>
         <value>
-            <ThingDef ParentName="BaseGrenadeProjectile">
+            <ThingDef ParentName="BaseExplosiveBullet">
                 <defName>HRK_Proj_PanzerwurfmineGrenade</defName>
                 <label>PWM anti-tank grenade</label>
                 <graphicData>
