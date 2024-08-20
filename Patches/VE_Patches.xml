@@ -9,7 +9,7 @@
         <nomatch Class="PatchOperationSequence">
             <operations>
 
-                <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VWEG">
+                <!--<li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VWEG">
                     <xpath>Defs/ThingDef[defName="HRK_Stielhandgranate24Grenade"]/graphicData/texPath</xpath>
                     <value>
                         <texPath>Things/Item/Equipment/WeaponRanged/HRK_Stielhandgranate24GrenadesLoose</texPath>
@@ -28,7 +28,7 @@
                     <value>
                         <researchPrerequisite>VWE_HeavyWeapons</researchPrerequisite>
                     </value>
-                </li>
+                </li>-->
 
                 <li Class="PatchOperationAddModExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
                     <xpath>Defs/ThingDef[defName="HRK_Panzerschreck"]</xpath>
